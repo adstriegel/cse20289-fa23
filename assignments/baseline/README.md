@@ -116,19 +116,25 @@ For Git, there are two ways to create a repository: initializing a repository an
 2. Go to that repository and make sure that the repository is set as private.
 3. Add Professor Striegel and the TAs (adstriegel, WadElla, EamonTracey) as collaborators for your repository.  We will strictly be read-only but we do need access for your private repository.  
 
-Now that we have it created, let's clone your repository then locally:
+Now that we have it created, let's clone your repository then locally.  You should replace `adstriegel` with your GitHub username and the repository name to use your netid.  
 
     # Example of cloning GitHub assignments repository to 
     # local or student machine
-    % git clone git@github.com:student-cse20289-fa23-NETID.git
-    remote: Enumerating objects: XX, done.
-    remote: Counting objects: 100% (XX/XX), done.
-    remote: Compressing objects: 100% (XX/XX), done.
-    Receiving objects: 100% (XX/XX), 6.25 KiB | 1.56 MiB/s, done.
-    Resolving deltas: 100% (X/X), done.
-    remote: Total XX (delta X), reused XX (delta X), pack-reused 0
+    % git clone git@github.com:adstriegel/student-cse20289-fa23-striegel.git
+    remote: Enumerating objects: 3, done.
+    remote: Counting objects: 100% (3/3), done.
+    remote: Compressing objects: 100% (2/2), done.
+    remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+    Receiving objects: 100% (3/3), done.
+    % ls
+    README.md
+    %
     
-If all goes well, the X's in the example will have the actual file count and your private repository will have been cloned appropriately (just like the class repository).  At this point, you should now have two directories underneath your repositories directory, one directory containing the public class repository and the other one containing your private repository.  The class repository should have files while your private repository should be empty outside of a `README.md`.    
+> We need the username and hostname `git@github.com` to get access to your private repository together with the keys that we set up earlier.
+
+If all goes well, your private repository will have been cloned appropriately (just like the class repository).  
+
+At this point, you should now have two directories underneath your repositories directory, one directory containing the public class repository and the other one containing your private repository.  The class repository should have files while your private repository should be empty outside of a `README.md`.    
 
 ## Task 4 - Practice the assignment cadence
 
@@ -141,7 +147,37 @@ For class, we will use branch to effectively allow us to have a split off versio
 Our normal cadence will be something like the following:
 
 1. Pull the class repository
-2. Create a branch in your repository named `NETID/assignmentXX` where `XX` is the assignment number
+
+        % cd cse20289-fa23
+        % pwd
+        /Users/striegel/Documents/repos/cse20289-fa23
+        % git pull
+        Already up to date.
+        %
+2. Switch to the directory with your repository
+
+        % cd ..
+        % cd student-cse20289-fa23-striegel
+        % git status
+        On branch main
+        Your branch is up to date with 'origin/main'.
+
+        nothing to commit, working tree clean
+        %
+
+3. Create a branch in your repository named `NETID/assignmentXX` where `XX` is the assignment number
+
+		% git branch striegel/assignmentXX
+		% git checkout striegel/assignmentXX
+		Switched to branch 'striegel/assignmentXX'
+		% git status
+		On branch striegel/assignmentXX
+        nothing to commit, working tree clean
+
+    We can also use the `-b` argument to do it all in one line.
+
+		 % git checkout -b striegel/assignmentXX
+
 3. Do the assignment, making sure to `commit` and `push` 
 4. When complete, `merge` your branch into your main branch
 
@@ -150,23 +186,35 @@ So, let's try it out.
 1. Switch to your private repository on the command line
 
         % cd student-cse20289-fa23-striegel
+        
 2. Check on the status of your repository via `git status`
 3. Create a branch named `NETID/assignment00`
 
-        % git branch striegel/assignment00  
-4. Copy all of the files from the class repository to your repository
+        % git checkout -b striegel/assignment00  
+4. Make a directory named `assignments` and change to that directory
 
-        % cp -R ../cse20289-fa23/assignments/assignment00 .
+        % mkdir assignments
+        % cd assignments        
+5. Copy all of the files from the class repository to your repository
+
+        % cp -R ../../cse20289-fa23/assignments/assignment00 .
         
     This copies the contents of the `assignment00` directory from the class directory (including any subdirectories via the `-R` argument) to this directory.  
-    
-5. Check that there is an empty `README.md` file present.    
+
+6. Switch to the assignment00 directory
+
+        % cd assignment00    
+7. Check that there is an empty `README.md` file present.    
 
         % ls
         README.md
         %
-6. Add the files to your repository
+8. Go up to the base of your repository and add all of the files to your repository
 
+        % cd ..
+        % cd ..
+        % pwd
+        /Users/striegel/Documents/repos/student-cse20289-fa23-striegel
         % git add --all 
 
     This adds all of the initial files to be tracked by `git`.
@@ -174,24 +222,61 @@ So, let's try it out.
 7. Commit the initial versions of the files.
 
         % git commit -am "Initial commit - assignment00"
+        1 file changed, 0 insertions(+), 0 deletions(-)
+        create mode 100644 assignments/assignment00/README.md
         
     We have now added and committed the initial versions of the files to our local repository.  At this point, you could push it to the remote repository at GitHub or just keep going, it is up to you.
     
 8. Create a new file with a clever messge
 
+        % cd assignments/assignment00
         % echo "Clever message goes here" clever.txt
         
 9. Add that new file and commit it.  
 
-    Think about what you want to add and commit.  Push the changes out to the remote repository.    
+    Think about what you want to add and commit.  Push the changes out to the remote repository. 
     
-10. Take a look online via GitHub and see if everything is there.
-11. If you are done with the assignment, merge your branch back into the main branch.
+        % git push
+        fatal: The current branch striegel/assignment00 has no upstream branch.
+        To push the current branch and set the remote as upstream, use
 
+        git push --set-upstream origin striegel/assignment00
+        
+        To have this happen automatically for branches without 
+        a tracking upstream, see 'push.autoSetupRemote' in 
+        'git help config'.       
+        %
+        
+   Oh noes! Let's follow what `git` told us:
+   
+        % git push --set-upstream origin striegel/assignment00
+        Enumerating objects: 11, done.
+        Counting objects: 100% (11/11), done.
+        Delta compression using up to 8 threads
+        Compressing objects: 100% (5/5), done.
+        Writing objects: 100% (10/10), 799 bytes | 799.00 KiB/s, done.
+        Total 10 (delta 0), reused 0 (delta 0), pack-reused 0 remote: 
+        remote: Create a pull request for 'striegel/assignment00' on GitHub by visiting:
+        remote:      https://github.com/adstriegel/student-cse20289-fa23-striegel/pull/new/striegel/assignment00
+        remote: 
+        To github.com:adstriegel/student-cse20289-fa23-striegel.git
+        * [new branch]      striegel/assignment00 -> striegel/assignment00
+        branch 'striegel/assignment00' set up to track 'origin/striegel/assignment00'.
+        %
+         
+10. Take a look online via GitHub and see if everything is there.  Note that you will need to pick the appropriate branch (not `main`).  
+11. If you are done with the assignment, merge your branch back into the main branch.  Switch back to the main branch.  Merge in the branch.  Push the changes to main.  
+
+        % git checkout main
         % git merge striegel/assignment00        
+        % git push
 
+Whew! We made it. Using `git` can always be an adventure but hopefully we will get savvier as the semester goes on.    
 
+When in doubt, remember a couple of things:
 
+* `git status` can be helpful to remember which branch we are in.
+* `git log` will tell you what you have done so far.
 
  
 
