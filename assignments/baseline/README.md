@@ -130,10 +130,65 @@ Now that we have it created, let's clone your repository then locally:
     
 If all goes well, the X's in the example will have the actual file count and your private repository will have been cloned appropriately (just like the class repository).  At this point, you should now have two directories underneath your repositories directory, one directory containing the public class repository and the other one containing your private repository.  The class repository should have files while your private repository should be empty outside of a `README.md`.    
 
-## Task 4 - Branch, push, merge
+## Task 4 - Practice the assignment cadence
 
+For the purposes of this class, you will be the only one editing the code in your repository.  This makes things a bit easier as we do not have to deal with the ugliness of merging whenever someone makes changes to other files or the same file you were modifying.  We will talk about that during class.
 
+For class, we will use branch to effectively allow us to have a split off version relatively to what we are developing (e.g. a specific assignment).  This is a bit extra since you are the only one editing it but branching can be helpful to keep a consistent code base when adding a new feature or working on a partiuclar bug fix. 
+
+> Note that different organizations may have different policies with respect to branching.  
+
+Our normal cadence will be something like the following:
+
+1. Pull the class repository
+2. Create a branch in your repository named `NETID/assignmentXX` where `XX` is the assignment number
+3. Do the assignment, making sure to `commit` and `push` 
+4. When complete, `merge` your branch into your main branch
+
+So, let's try it out.  
+
+1. Switch to your private repository on the command line
+
+        % cd student-cse20289-fa23-striegel
+2. Check on the status of your repository via `git status`
+3. Create a branch named `NETID/assignment00`
+
+        % git branch striegel/assignment00  
+4. Copy all of the files from the class repository to your repository
+
+        % cp -R ../cse20289-fa23/assignments/assignment00 .
+        
+    This copies the contents of the `assignment00` directory from the class directory (including any subdirectories via the `-R` argument) to this directory.  
     
+5. Check that there is an empty `README.md` file present.    
+
+        % ls
+        README.md
+        %
+6. Add the files to your repository
+
+        % git add --all 
+
+    This adds all of the initial files to be tracked by `git`.
+    
+7. Commit the initial versions of the files.
+
+        % git commit -am "Initial commit - assignment00"
+        
+    We have now added and committed the initial versions of the files to our local repository.  At this point, you could push it to the remote repository at GitHub or just keep going, it is up to you.
+    
+8. Create a new file with a clever messge
+
+        % echo "Clever message goes here" clever.txt
+        
+9. Add that new file and commit it.  
+
+    Think about what you want to add and commit.  Push the changes out to the remote repository.    
+    
+10. Take a look online via GitHub and see if everything is there.
+11. If you are done with the assignment, merge your branch back into the main branch.
+
+        % git merge striegel/assignment00        
 
 
 
