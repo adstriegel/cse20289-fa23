@@ -11,9 +11,9 @@ The focus of this document is how to get things set up for assignment submission
 
 ## Task 1: Clone the Class Repository
 
-In the first task, we will [clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) the class repository.  Cloning will create a local copy that we can synchronize (pull) updates from the class repository.  The class repository is public meaning that anyone can clone it which is what you will do in this first step.    
+In the first task, we will [clone](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) the class repository.  Cloning will create a local copy that we can synchronize (`fetch`) updates from the class repository.  The class repository is public meaning that anyone can clone it which is what you will do in this first step.    
 
-You will have read access (clone, pull) to the repository just as any member of the public.  The class repository can be found at the following location:
+You will have read access (`clone`, `fetch`) to the repository just as any member of the public.  The class repository can be found at the following location:
 
 [https://github.com/adstriegel/cse20289-fa23.git](https://github.com/adstriegel/cse20289-fa23.git)
 
@@ -61,6 +61,8 @@ If at any time we would like to make sure we are up to date, we simply do a `pul
     Already up to date.
     
 The `git pull` command looks inside the `.git` subdirectory to figure out where the remote repository is and then attempts to pull down any updates from that remote repository.  Since we just cloned the repository, there should not be any updates.  The act of doing a `clone` or `pull` are read-only commands and as such do not require any credentials if the repository is public.    
+
+> Should we `fetch` or should we `pull`, what is the [difference](https://www.geeksforgeeks.org/git-difference-between-git-fetch-and-git-pull/)? The answer is it depends.  `pull` tries basically bring you up to date and to fast-forward merge. That usually is OK but not always if lots of contributors are changing lots of things.  `fetch` takes a kinder, gentler approach. Think of `pull` = `fetch` + `merge`     
 
 ### Summary - Task 1
 
@@ -263,6 +265,8 @@ So, let's try it out.
         * [new branch]      striegel/assignment00 -> striegel/assignment00
         branch 'striegel/assignment00' set up to track 'origin/striegel/assignment00'.
         %
+        
+    > As a general aside, it is not uncommon for branches to be more of a local thing.  Think of it like, I need to do some explorations / tinkering on X but I need to be able to flip back and forth to fix things on the main branch.  Remember, as long as you commit things, you can always unwind and fix pretty much anything.  
          
 10. Take a look online via GitHub and see if everything is there.  Note that you will need to pick the appropriate branch (not `main`).  
 11. If you are done with the assignment, merge your branch back into the main branch.  Switch back to the main branch.  Merge in the branch.  Push the changes to main.  
@@ -271,15 +275,19 @@ So, let's try it out.
         % git merge striegel/assignment00        
         % git push
 
-Whew! We made it. Using `git` can always be an adventure but hopefully we will get savvier as the semester goes on.    
+Whew! We made it. Using `git` can always be an adventure but hopefully we will get savvier as the semester goes on.
+
+> You may want to avoid pushing while working on a branch altogether.  That is perfectly fine.    
 
 When in doubt, remember a couple of things:
 
 * `git status` can be helpful to remember which branch we are in.
 * `git log` will tell you what you have done so far.
-
+* Files are never lost.  As long as you commit it, `git` keeps copies in the local repository.  
  
+### Bonus Thoughts - Cross-Machine Synchronization
 
+While it is possible to use a combination of `git push` and `git pull` to move files between machines (e.g. code on your laptop, test on the student machine), this tends to be sub-optimal.  Provided that you remember to `commit` as you do your editing passes, passwordless `scp` tends to work fairly well.  
  
 
    
