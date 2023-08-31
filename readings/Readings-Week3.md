@@ -55,5 +55,27 @@ Although not required, it is highly recommended that you learn how to use [tmux]
 
 ## Key Points
 
-To be added by Friday, September 1st
+### Networking
+
+* How do you figure out the IP address for a particular hostname? 
+* How do you fetch a file from a website?
+* How do you copy a file securely to a server?
+* How can you synchronize files between machines?
+* How can you determine the latency between two machines?
+* How can you determine which path your packets take between two machines?
+
+### Scripting
+
+* What does the first line mean in a script, e.g. `#!/bin/sh`?
+* What is the significance of the $ in a script?
+* For a script, how do you get at the arguments to the script?
+* How can you test if a file exists? Is a directory? Is executable?
+* How do you write an `if` statement? How is that different from C or Python or MATLAB?
+* How do we denote a comment?
+* What is the significance of using brackets (e.g. `[ ]`)?
+* How do you make a file executable? 
+* How do you run a file in your local directory?
+* How do you run a script?
+* How do you run through the various arguments to the file?
+* How do you return a value from a script?
 
