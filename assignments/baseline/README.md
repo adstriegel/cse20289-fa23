@@ -180,8 +180,8 @@ Our normal cadence will be something like the following:
 
 		 % git checkout -b striegel/assignmentXX
 
-3. Do the assignment, making sure to `commit` and `push` 
-4. When complete, `merge` your branch into your main branch
+3. Do the assignment, making sure to `commit` multiple times along the way.   
+4. When complete, check out `main` and then `merge` your branch into the `main` branch.
 
 So, let's try it out.  
 
@@ -236,7 +236,9 @@ So, let's try it out.
         
 9. Add that new file and commit it.  
 
-    Think about what you want to add and commit.  Push the changes out to the remote repository. 
+    Think about what you want to add and commit.  If you would like, push the changes out to the remote repository. 
+    
+    > Generally, you will wait to do a `push` until the very end.  For example purposes, we walk through what happens if you try to push a branch.  
     
         % git push
         fatal: The current branch striegel/assignment00 has no upstream branch.
