@@ -44,6 +44,9 @@ do
             git clone $FetchURL
         else
             printf ' Repository present for %s\n' "$FldNetID"
+            cd $DirCorrect
+            git pull
+            cd ..
         fi
     fi
 #    fi
