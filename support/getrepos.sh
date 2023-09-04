@@ -32,7 +32,6 @@ do
             continue
         fi
 
-
         DirCorrect="student-cse20289-fa23-$FldNetID"
         #echo $DirCorrect
         
