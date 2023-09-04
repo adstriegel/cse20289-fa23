@@ -25,7 +25,7 @@ From [The Linux Command Line](https://linuxcommand.org/tlcl.php) - Scripting:
 * Chapter 32 - Positional Parameters
 * Chapter 33 - Flow Control: Looping With For
 
-For a shorter version of the scripting chapters, you can read Writing Shell Scripts instead. However, the chapters above are listed to serve as a reference should you need them (they do a more thorough job of explaining the material).
+For a shorter version of the scripting chapters, you can read [Writing Shell Scripts](https://linuxcommand.org/lc3_writing_shell_scripts.php) instead. However, the chapters above are listed to serve as a reference should you need them (they do a more thorough job of explaining the material).
 
 ## Optional Resources
 
