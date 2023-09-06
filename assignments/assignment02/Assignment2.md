@@ -124,8 +124,47 @@ The submission will be the same procedure as with Assignment 1.  That means:
 
 ## Rubric
 
-To be added early in the week    
+**Total**: 40 points
 
+### General Mechanics - 6 points
+
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas
+* 1 pt - Correct use of branchin
+* 1 pt - Three or more commits
+
+### Manual Operation - 9 points
+
+* 1.5 pts - `.cc` inventory
+* 1.5 pts - `.h` inventory
+* 1.5 pts - `.o` inventory
+* 0.5 pts - `src-count.txt` is present
+* 1 pt - Correct LOC for `.cc` files
+* 1 pt - Correct LOC for `.h` files
+* 1 pt - Correct `.gitignore`    
+* 1 pt - Correct modified `Makefile` 
+
+
+### Automation - Fixed Setting - 16.5 pts
+
+* 1.5 pts - Well commented and structured
+* 3 pts - Runs without errors
+* 1 pt - Uses `~/repos`
+* 1 pt - Uses `inventory`
+* 6 pts - Inventories `.cc`, `.h`, `.o` files correctly
+* 4 pts - Counts LOC for `.cc` and `.h` files and places result in `src-summary.txt`
+
+### Automation - Variable Inputs - 18.5 pts
+
+* 1.5 pts - Well-commented and structured
+* 3 pts - Runs without errors with valid inputs
+* 1 pt - Catches missing argument
+* 1 pt - Catches repo location being invalid
+* 2 pts - Makes / checks inventory location
+* 5 pts - LOC / Inventory is correct
+* 5 pts - Operates correctly on other public repositories
+ 
 
 
          
