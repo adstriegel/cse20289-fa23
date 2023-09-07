@@ -14,3 +14,7 @@ If you can avoid it, try not to commit the `ScaleBox` repository once downloaded
 No, you should modify the Makefile as part of the earlier task to properly remove all object files, ideally with a much more compact command or commands(s).  
 
 Look for the `clean` target inside of the `Makefile`, e.g. what gets invoked when `make clean` is run.  
+
+### How can I have .o files to inventory in Task 5 when I deleted them all earlier?
+
+Your code for Task 5 should operate on a clean / freshly pulled repository that does have the `.o` files.  
