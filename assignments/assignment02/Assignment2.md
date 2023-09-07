@@ -44,9 +44,11 @@ Write down the different extensions of files that contain source code.  Note tha
 
 All of the files created in this step should be in your `assignment02` directory.  
 
-1. Create a file named `src-inventory-TYPE.txt` where type is the source code file type (e.g. `.c`) that contains all of the file names (and the appropriate path) of that type.  For instance, `src-inventory-c.txt` would contain all files of the `.c` type.
-2. Create a file in your assignment directory named `src-summary.txt` and list each file type (e.g. `.c`) and a count.    
-3. Count the number of lines of code (LOC) present in each type of source code.  Append lines within the `src-summary.txt` file that lists each file type and the number of lines of code, e.g. `LOC (.c): 20481`. 
+1. Create a file named `src-inventory-TYPE.txt` where type is the source code file type (e.g. `.cc`) that contains all of the file names (and the appropriate path) of that type.  For instance, `src-inventory-cc.txt` would contain all files of the `.cc` type.
+2. Create a file in your assignment directory named `src-summary.txt` and list each file type (e.g. `.cc`) and a count.    
+3. Count the number of lines of code (LOC) present in each type of source code.  Append lines within the `src-summary.txt` file that lists each file type and the number of lines of code, e.g. `LOC (.cc): 20481`. 
+
+> Note that 20481 is not the right number of lines of code. 
 
 ## Task 4 - Some of These Things Do Not Belong
 
