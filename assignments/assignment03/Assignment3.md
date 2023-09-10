@@ -49,11 +49,13 @@ For this part, create a sub-directory named `tinker`.
 
 ### Task 3a - Archive Extraction
 
-Look in the `examples/archives` directory for Assignment 3. There are several example archives present there.  Your code should support the following archives: `.tar`, `.tar.gz`, `.zip`, `.rar`, `.bz2`.  Figure out the correct tools to use.
+Look in the `examples/archives` directory for Assignment 3. There are several example archives present there.  Your code should support the following archives: `.tar`, `.tar.gz`, `.zip`, and `.bz2`.  Figure out the correct tools and their respective invocations.  
 
 > You will not need to handle the case of nested archives, e.g. a `.zip` inside of a `.tar`.  That will be an extra-credit option.  
 
 Write a script named `ae.sh` (Archive Extract) that takes in a filename as its argument and appropriately extracts the content of the file.  It should make sure to do this in a sub-directory named `archive` (creating the directory if necessary).         
+
+You will need to handle the fact that multiple sub-directories may be created as part of the archive extraction process. Think about how you might get a listing of all of the files contained within the various sub-directories.   
 
 ### Task 3b - Bad Sites
 
@@ -66,7 +68,7 @@ There are several example files placed on-line in the `examples/badsites`  direc
 * `bad-file.eml` : A file containing a malicious URL.
 * `bad-file2.eml` : A second file containing a malicious URL.
 
-Write a script named `sbs.sh` (Search Bad Sites) that takes in the list of bad sites as an argument and the file to search for any of the bad URLs (e.g. http://xxxx).  If no bad URLs are detected, the script should echo CLEAN.  If a bad URL is detected, you should echo out BAD URL followed by the malicious URL.
+Write a script named `sbs.sh` (Search Bad Sites) that takes in the list of bad sites as an argument and the file to search for any of the bad URLs (e.g. http://xxxx).  If no bad URLs are detected, the script should echo CLEAN.  If a bad URL is detected, you should echo out MALICIOUSURL followed by the malicious URL, e.g. MALICIOUSURL, http://xxx.yyy.zzz/.
 
 ### Task 3c - Sensitive Files
 
@@ -76,11 +78,11 @@ There are several example files placed on-line in the `examples/sensitive` direc
 * `bad-marking.txt` : A file that trips the `*SENSITIVE*` marker.
 * `bad-SSN.txt` : A file that trips the social security number (recall that SSNs have the format of XXX-XX-XXXX).
 
-Write a script named `sf.sh` (Sensitive Finder) that scans a file for sensitive information.  If no sensitive information is detected, the script should echo CLEAN.  If sensitive information is detected, you should echo out SENSITIVE followed by the reason (MARKED SENSITIVE or SSN).
+Write a script named `sf.sh` (Sensitive Finder) that scans a file for sensitive information.  If no sensitive information is detected, the script should echo CLEAN.  If sensitive information is detected, you should echo out SENSITIVE followed by the reason (MARKED SENSITIVE or SSN), e.g. SENSITIVE, MARKED SENSITIVE.
 
 ### Task 3d - Bring it Together
 
-Using your existing scripts (`ae.sh`, `sbs.sh`, `sf.sh`), write a script named `aa.sh` (Archive Analyzer) that extracts an archive and then checks any of the detected files.  
+Using your existing scripts (`ae.sh`, `sbs.sh`, `sf.sh`), write a script named `aa.sh` (Archive Analyzer) that extracts an archive and then checks any of the files within the respective archive.  It should also appropriately clean up any files extracted (e.g. you should delete the extracted files).    
 
 If everything is good, echo CLEAN.  Otherwise, echo out the first reason that causes the archive to be noted as potentially bad.  Note that only one reason is sufficient and that only need to identify one violation.     
 
@@ -129,20 +131,32 @@ Expanding upon the earlier description, your script named `scanner.sh` should do
       * Sleep for one second and repeat the loop
    * If there is new content
       * Extract the archive in an appropriate location of your choosing
+         * If the extraction files, the archive should be quarantined with the reason of `CANNOTEXTRACT`.   
       * Scan the underlying files for malicious URLs
       * Scan the underlying files for sensitive content
-      * If either the malicious URL or sensitive content is violated, place the archive into the quarantine location.  Add in a file with the `.reason` extension that contains the reason for quarantine (e.g. if `FA34ECA4.tar.gz` trips an issue, there should be a file named `FA34ECA4.tar.gz.reason` created with the reason.  
+      * If either the malicious URL or sensitive content is violated, place the archive into the quarantine location.  Add in a file with the `.reason` extension that contains the reason for quarantine (e.g. if `FA34ECA4.tar.gz` trips an issue, there should be a file named `FA34ECA4.tar.gz.reason` created with the reason.   
       * If the archive passes, place the archive in the `approved` location.         
 
 Your code should continue to loop until exited via Control-C.
 
+A `.reason` file should have the following format:
+
+    Filename
+    Reason    
+    Trigger
+
+The `Filename` is the file within the archive that triggered your scanner.  The list of reasons are: `CANNOTEXTRACT`, `MALICIOUSURL`, `SENSITIVE`.  The `Trigger` should be the specific triger (the specific URL detected, MARKED SENSITIVE, SSN).    
+
 The log functionality should operate in the following manner:
 
 * Operate in an append manner
+* All log entries should be a single line. 
+* All entries should have an appropriate date and time.
 * Note when the script is started
 * Note when the script is exited (you will need to catch the Control-C signal and handle it)
-* Note when any archive is processed and the result (APPROVE or QUARANTINE). Include the archive name and the result.
-* All entries should have an appropriate date and time.
+* Note when any archive is processed and the result (APPROVE or QUARANTINE). Include the archive name and the result. 
+   * For a clean entry, that should just be DateTime, ArchiveName, APPROVE.
+   * For a bad entry, that should echo the reason file together with the clean information on a single line, e.g. DateTime, ArchiveName, QUARANTINE, SENSITIVE, SSN.    
 
 ### Task 4c - Extra Credit
 
