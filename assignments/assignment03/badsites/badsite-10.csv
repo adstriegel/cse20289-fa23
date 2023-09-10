@@ -1,0 +1,19 @@
+################################################################
+# abuse.ch URLhaus Database Dump (CSV - online URLs only)      #
+# Last updated: 2023-09-09 23:45:10 (UTC)                      #
+#                                                              #
+# Terms Of Use: https://urlhaus.abuse.ch/api/                  #
+# For questions please contact urlhaus [at] abuse.ch           #
+################################################################
+#
+# id,dateadded,url,url_status,last_online,threat,tags,urlhaus_link,reporter
+"2710917","2023-09-09 23:45:10","http://59.182.65.70:43382/bin.sh","online","2023-09-09 23:45:10","malware_download","32-bit,elf,mips,Mozi","https://urlhaus.abuse.ch/url/2710917/","geenensp"
+"2710916","2023-09-09 23:39:06","http://59.88.239.61:42078/i","online","2023-09-09 23:39:06","malware_download","32-bit,elf,mips,mirai,Mozi","https://urlhaus.abuse.ch/url/2710916/","geenensp"
+"2710915","2023-09-09 23:34:07","http://117.253.106.201:51777/Mozi.m","online","2023-09-09 23:34:07","malware_download","elf,mirai,Mozi","https://urlhaus.abuse.ch/url/2710915/","lrz_urlhaus"
+"2710914","2023-09-09 23:19:21","http://117.255.180.255:37382/Mozi.m","online","2023-09-09 23:50:39","malware_download","elf,mirai,Mozi","https://urlhaus.abuse.ch/url/2710914/","lrz_urlhaus"
+"2710913","2023-09-09 23:19:06","http://112.72.177.227:3799/Mozi.m","online","2023-09-09 23:50:29","malware_download","elf,Mozi","https://urlhaus.abuse.ch/url/2710913/","lrz_urlhaus"
+"2710912","2023-09-09 22:04:06","http://107.142.171.93:54790/Mozi.a","online","2023-09-09 23:37:12","malware_download","elf,mirai,Mozi","https://urlhaus.abuse.ch/url/2710912/","lrz_urlhaus"
+"2710911","2023-09-09 21:53:05","http://98.159.98.31/f2q2kke5aadloo4aasdjjjfirbmw/0xh0roxxnavebusyoo.x86","online","2023-09-09 23:48:16","malware_download","32,elf,intel,mirai","https://urlhaus.abuse.ch/url/2710911/","zbetcheckin"
+"2710910","2023-09-09 21:52:05","http://98.159.98.31/f2q2kke5aadloo4aasdjjjfirbmw/0xh0roxxnavebusyoo.x86_64","online","2023-09-09 23:58:39","malware_download","64,elf,mirai","https://urlhaus.abuse.ch/url/2710910/","zbetcheckin"
+"2710909","2023-09-09 21:52:04","http://98.159.98.31/f2q2kke5aadloo4aasdjjjfirbmw/0xh0roxxnavebusyoo.i686","online","2023-09-09 23:51:27","malware_download","32,elf,intel,mirai","https://urlhaus.abuse.ch/url/2710909/","zbetcheckin"
+"2710908","2023-09-09 21:51:07","http://98.159.98.31/f2q2kke5aadloo4aasdjjjfirbmw/0xh0roxxnavebusyoo.arm","online","2023-09-09 23:48:47","malware_download","32,arm,elf,mirai","https://urlhaus.abuse.ch/url/2710908/","zbetcheckin"

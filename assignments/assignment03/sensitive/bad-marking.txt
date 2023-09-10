@@ -1,0 +1,22 @@
+Return-Path: <striegel@nd.edu>
+Received: from smtpclient.apple ([2600:1008:b011:8fe4:5085:bdc6:f21a:3749])
+        by smtp.gmail.com with ESMTPSA id t5-20020a6bdb05000000b0078754bed499sm448957ioc.37.2023.09.08.04.56.35
+        for <striegel@nd.edu>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 08 Sep 2023 04:56:35 -0700 (PDT)
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+From: Aaron Striegel <striegel@nd.edu>
+Mime-Version: 1.0 (1.0)
+Date: Fri, 8 Sep 2023 07:56:34 -0400
+Subject: AWK command in Unix/Linux with examples - GeeksforGeeks
+Message-Id: <A9F41218-BC28-43F1-A45C-58188C7941F9@nd.edu>
+To: Aaron Striegel <striegel@nd.edu>
+X-Mailer: iPhone Mail (20G81)
+
+*SENSITIVE*
+
+https://www.geeksforgeeks.org/awk-command-unixlinux-examples/
+
+
+Sent from my iPhone
