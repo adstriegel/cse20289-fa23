@@ -1,0 +1,12 @@
+.cc: 
+131 inventory/src-inventory-cc.txt
+.o: 
+85 inventory/src-inventory-o.txt
+.h: 
+150 inventory/src-inventory-h.txt
+(LOC .cc):
+ 33991 total
+(LOC .o):
+   6889 total
+(LOC .h):
+ 17956 total
