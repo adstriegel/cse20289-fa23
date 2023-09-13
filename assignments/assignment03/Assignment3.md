@@ -45,7 +45,7 @@ Your script should do the following:
 
 ### Task 3 - Tinkering
 
-For this part, create a sub-directory named `tinker`.  
+For this part, create a sub-directory named `tinker`.  This is where your code for Task 3 will go.  
 
 ### Task 3a - Archive Extraction
 
@@ -64,11 +64,11 @@ For now, just make sure that you appropriately interpet the extension that is pr
 You might run your code like this:
 
     $ pwd
-    $ /escnfs/home/striegel/repos/student-cse20289-fa23-striegel/assignments/assignment03
+    $ /escnfs/home/striegel/repos/student-cse20289-fa23-striegel/assignments/assignment03/tinker
     $ ls
     ae.sh example-zip.zip
     $ sh ae.sh example-zip.zip
-    Archive directory is not present .. creating!
+    archive directory is not present .. creating!
     Extracting a zip file via unzip
     $ ls
     ae.sh archive example-zip.zip
