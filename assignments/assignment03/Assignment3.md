@@ -55,7 +55,44 @@ Look in the `examples/archives` directory for Assignment 3. There are several ex
 
 Write a script named `ae.sh` (Archive Extract) that takes in a filename as its argument and appropriately extracts the content of the file.  It should make sure to do this in a sub-directory named `archive` (creating the directory if necessary).         
 
-You will need to handle the fact that multiple sub-directories may be created as part of the archive extraction process. Think about how you might get a listing of all of the files contained within the various sub-directories.   
+> We make a separate sub-directory to extract our files so that it does not clobber any of our scripts that we wish to keep.  For instance, what is the zip file contained a file named `ae.sh` or `sbs.sh` and overwrote our code?  In that case, hopefully you did some `git commit` invocations prior.  
+
+In your later code, you will need to handle the fact that multiple sub-directories may be created as part of the archive extraction process.  In the last project, you got a listing of all of a specific type of file contained within a given path.   
+
+For now, just make sure that you appropriately interpet the extension that is present and extract the file in a sub-directory named `archive`.
+
+You might run your code like this:
+
+    $ pwd
+    $ /escnfs/home/striegel/repos/student-cse20289-fa23-striegel/assignments/assignment03
+    $ ls
+    ae.sh example-zip.zip
+    $ sh ae.sh example-zip.zip
+    Archive directory is not present .. creating!
+    Extracting a zip file via unzip
+    $ ls
+    ae.sh archive example-zip.zip
+    $ cd archive
+    $ ls
+    Lecture09.pdf
+    
+A second invocation after copying `example-tar.tar` over might look like this:
+
+    $ ls
+    ae.sh archive example-zip.zip example-tar.tar
+    $ sh ae.sh example-tar.tar
+    archive directory already present - no need to create
+    Extract a tar file
+    $ ls
+    ae.sh archive example-zip.zip example-tar.tar
+    $ cd archive
+    $ ls
+    Lecture09.pdf badsites
+    $ cd badsites
+    $ ls
+    bad-file.eml bad-file2.eml clean-file.eml
+
+The exact specifics of the output are up to you on this command.  We will be checking that your code does the right thing, not so much what you display to the user.  
 
 ### Task 3b - Bad Sites
 
