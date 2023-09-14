@@ -59,6 +59,8 @@ Write a script named `ae.sh` (Archive Extract) that takes in a filename as its a
 
 In your later code, you will need to handle the fact that multiple sub-directories may be created as part of the archive extraction process.  In the last project, you got a listing of all of a specific type of file contained within a given path.   
 
+> You do not need to catch the various strings in binary files.  Your search code / scripts (bad sites, sensitive numbers) should simply ignore those files.
+
 For now, just make sure that you appropriately interpet the extension that is present and extract the file in a sub-directory named `archive`.
 
 You might run your code like this:
@@ -107,6 +109,15 @@ There are several example files placed on-line in the `examples/badsites`  direc
 
 Write a script named `sbs.sh` (Search Bad Sites) that takes in the list of bad sites as an argument and the file to search for any of the bad URLs (e.g. http://xxxx).  If no bad URLs are detected, the script should echo CLEAN.  If a bad URL is detected, you should echo out MALICIOUSURL followed by the malicious URL, e.g. MALICIOUSURL, http://xxx.yyy.zzz/.
 
+For instance, you would run your script as:
+
+    $ sh sbs.sh badsite-10.csv archive/bad-file.eml
+    Loaded site information .. success!
+    Scanning file named archive/bad-file.eml
+    Malicious URL detected!
+    MALICIOUSURL: http://....
+    $
+
 ### Task 3c - Sensitive Files
 
 There are several example files placed on-line in the `examples/sensitive` directory.  The files are as follows:
@@ -116,6 +127,14 @@ There are several example files placed on-line in the `examples/sensitive` direc
 * `bad-SSN.txt` : A file that trips the social security number (recall that SSNs have the format of XXX-XX-XXXX).
 
 Write a script named `sf.sh` (Sensitive Finder) that scans a file for sensitive information.  If no sensitive information is detected, the script should echo CLEAN.  If sensitive information is detected, you should echo out SENSITIVE followed by the reason (MARKED SENSITIVE or SSN), e.g. SENSITIVE, MARKED SENSITIVE.
+
+You would run your script as:
+
+    $ sh sf.sh archive/bad-file.eml
+    Scanning for sensitive information
+    File to scan: archive/bad-file.eml
+    CLEAN
+    $
 
 ### Task 3d - Bring it Together
 
@@ -171,7 +190,7 @@ Expanding upon the earlier description, your script named `scanner.sh` should do
    * If there is new content
       * Extract the archive in an appropriate location of your choosing
          * If the extraction files, the archive should be quarantined with the reason of `CANNOTEXTRACT`.   
-      * Scan the underlying files for malicious URLs
+      * Scan the underlying files for malicious URLs - use the 100 entry CSV at a location you choose
       * Scan the underlying files for sensitive content
       * If either the malicious URL or sensitive content is violated, place the archive into the quarantine location.  Add in a file with the `.reason` extension that contains the reason for quarantine (e.g. if `FA34ECA4.tar.gz` trips an issue, there should be a file named `FA34ECA4.tar.gz.reason` created with the reason.   
       * If the archive passes, place the archive in the `approved` location.         
@@ -216,11 +235,57 @@ The submission will be the same procedure as with Assignment 2.  That means:
 
 ## Rubric  
 
-To be added on Thursday
+### General Mechanics - 12 points
 
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Correct use of branching
+* 1 pt - Three or more commits visible on GitHub
+* 2 pts - Inclusion of only the relevant source code / correct usage as needed of `.gitignore` or selective inclusion of files
+* 4 pts - Good / well-structured code
 
+### Task 3 - 44 points
+
+For Task 3, you have a healthy degree of freedom on the output but need to make sure to output at least a line that contains the requested information in the writeup.  
+
+* 1 pt - All scripts are located in `tinker` sub-directory
+* 1 pt - Only the appropriate scripts or support files are in the `tinker` directory
+* 12 pts - `ae.sh` - Archive Extraction
+   * 8 pts - Operates with proper / good archive files (.tar, .tar.gz, .zip, .bz2)
+   * 1 pt - Properly places files in `archive` subdirectory
+   * 1 pt - Properly handles presence or lack of `archive` subdirectory
+   * 2 pts - Handles various error / warning cases (no file, bad labeling of extensions, same filenames in `archive`)
+* 10 pts - `sbs.sh` - Search Bad Sites
+   * 6 pts - Operates with proper / well-formed site lists across a variety of files    
+   * 2 pts - Properly outputs a decision
+   * 2 pts - Operates robustly / shows appropriate feedback for reasonable error / warning cases (no site file, no file to assess, binary file)
+* 8 pts - `sf.sh` - Sensitive number Finder
+   * 2 pts - Catches SSNs across a variety of files
+   * 2 pts - Catches the sensitive classification across a variety of files
+   * 2 pts - Properly outputs a decision
+   * 2 pts - Operates robustly / shows appropriate feedback for reasonable error / warning cases (no file to assess, binary file)
+* 12 pts - `aa.sh` - Archive Analyzer
+   * 4 pts - Operates with proper / good archive files (.tar, .tar.gz, .zip, .bz2)
+   * 2 pts - Catches malicious URLs
+   * 2 pts - Catches sensitive numbers
+   * 4 pts - Handles reasonable errors / warnings with an appropriate output
+
+### Task 4 - 30 points
+
+In Task 4, you will be bringing everything altogether.  You may need to use error codes or modify echoed information if you choose to utilize your scripts from Task 3.  You are not obligated to re-use your scripts from Task 3.  
  
-      
+* 1 pt - All scripts for Task 4 are located in `scanner` sub-directory
+* 1 pt - Only the appropriate scripts or support files are in the `scanner` sub-directory
+   * It is OK for instance to have a sub-directory where you place the bad site listing (make sure to use the 100 URL one) 
+* 2 pts - Proper usage of arguments
+* 8 pts - Proper operation the main loop with various test cases
+* 5 pts - Proper tagging / flagging of quarantined items
+* 5 pts - Proper logging / appending to the log
+* 5 pts - Error / robust handling including aspects such as insufficient arguments, bad locations for directories, log files, bad archives, etc. 
+* 3 pts - Proper handling of exit (Control-C)      
+
+  
 
 
 
