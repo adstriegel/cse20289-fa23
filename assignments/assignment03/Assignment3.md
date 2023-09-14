@@ -125,12 +125,14 @@ If everything is good, echo CLEAN.  Otherwise, echo out the first reason that ca
 
 ### Task 3 - Wrapping Up
 
-At this point, you should have created the following code in the `tinker` sub-directory:
+At this point, you should have created the following code in the `tinker` sub-directory in `assignment03` in your private repository:
 
 * `ae.sh` : A script to extract a variety of archives to an `archive` sub-directory (creating the directory if necessary).
 * `sbs.sh` : A script to search any file to see if it contains the list of bad sites as specified as one of the input arguments.
 * `sf.sh` : A script that checks for potentially sensitive information.
 * `aa.sh` : A script that analyzes archives for both bad sites as well as sensitive information.  
+
+It is OK if you have an archive sub-directory present in your working directory, just use `.gitignore` to avoid it being added to your repository. You can read up [here](https://www.atlassian.com/git/tutorials/saving-changes/gitignore) for more information on `.gitignore`.
 
 You should make sure that you have fully committed all of your respective modifications. 
 
@@ -214,7 +216,7 @@ The submission will be the same procedure as with Assignment 2.  That means:
 
 ## Rubric  
 
-To be added by mid-week 
+To be added on Thursday
 
 
  
