@@ -2,7 +2,7 @@
 
 **Assigned:** Sunday, September 10th
 
-**Due Date**: Saturday, September 16th, 10 PM
+**Due Date**: Saturday, September 23rd, 10 PM
 
 **Early Submission:** Friday, September 15th, 10 PM
 
@@ -219,6 +219,8 @@ The log functionality should operate in the following manner:
 ### Task 4c - Extra Credit
 
 If an optional argument of `-ad X` is provided (archive depth), allow for the processing of nested archives. Note that the default value for archive depth is zero and may go up to three deep.  
+
+> You may still submit this extra credit with the extended due date.
 
 ## Submission
 
