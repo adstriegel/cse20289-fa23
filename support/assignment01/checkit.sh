@@ -76,7 +76,7 @@ else
     echo " +0.5 pt -> linecount.txt is present"    
     Score=$((Score+5))
 
-    if [[ $(cat $DirRepo/assignments/assignment01/linecount.txt) -ne 429 ]]; then
+    if [[ -z $(grep -E '429' $DirRepo/assignments/assignment01/linecount.txt)  ]]; then
         echo " -> linecount.txt does not contain 429"
     else
         echo " +0.5 pt -> linecount.txt contains 429"    
