@@ -147,7 +147,7 @@ else
     Score=$((Score+5))
 
     # Use grep -c to count the number of lines that match - non-zero means is present
-    if [[ $(grep -c "student10.cse.nd.edu" $DirRepo/assignments/assignment01/output-reverse.txt) -eq 0 ]]; then
+    if [[ -z $(grep -E "student1[0-9].cse.nd.edu" $DirRepo/assignments/assignment01/output-reverse.txt) ]]; then
         echo " -> Does not contain results of reverse lookup"
     else
         echo " +0.5 pt -> output-reverse.txt contains expected value"    
