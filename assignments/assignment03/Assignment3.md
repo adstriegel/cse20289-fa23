@@ -170,6 +170,8 @@ Since we do not have the ability to easily feed in files, you will need to write
     
 You should write several scripts that copy in files that are both fully good, fully bad, as well as various mixes of files.  Put these support scripts into a `test` directory underneath `scanner`.  
 
+**This is just for testing.  It is up to you what order or combination you want to use. The idea is that you are mimicking something putting things into the `toscan` directory.**
+
 ### Task 4b - Automating the Scanner
 
 The final step is to bring everything together to realize the functionality described earlier in the assignment.  
