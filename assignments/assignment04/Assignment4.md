@@ -42,7 +42,7 @@ Your task is to count how many of the malicious URLs contain either an IP addres
 
 Your script should be placed in your `assignment04` directory in your repository (e.g. `assignments/assignment04`).  You will also probably want to place the various example CSV files from the public class repository in your repository as well. There are three files in the public repository, a file with 20 entries, a file with 100 entries, and the full file with all malicious URLs.    
 
-Each script should take in either one or three arguments, the file to process and an option to print out the top N server names.
+Each script should take in either one or two arguments, the file to process and an option to print out the top server name.
 
     $ ls
     evalbad.sh evalbad.py BadURL-First20.csv
