@@ -115,5 +115,40 @@ The submission will be the same procedure as with Assignments 2 and 3.  That mea
 
 ## Rubric  
 
-To be added
+### General Mechanics - 12 points
+
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Evidence of branching
+* 1 pt - Three or more commits visible on GitHub
+* 2 pts - Inclusion of only the relevant source code / correct usage as needed of `.gitignore` or selective inclusion of files
+* 4 pts - Good / well-structured code
+
+### Task 3a - Shell - 10 pts
+
+* 6 pts - Runs correctly across various good inputs
+* 2 pts - Handles robustly various bad inputs
+* 2 pts - Correctly states top site across a variety of inputs
+
+### Task 3b - Python - 10 pts
+
+* 6 pts - Runs correctly across various good inputs
+* 2 pts - Handles robustly various bad inputs
+* 2 pts - Correctly states top site across a variety of inputs
+
+### Task 4 - Test Scripts - 11 pts
+
+* 1 pt - Located in the test sub-directory
+* 5 pts - Five different test cases
+* 3 pts - Testing sufficiently described
+* 1 pt - Works on the shell script
+* 1 pt - Works on the Python script
+
+### Task 4 - Extra Credit - Up to 6 pts
+
+* 5 pts - Test script correctly tests / checks for output
+* 1 pt - Summation of results
+
+
  
