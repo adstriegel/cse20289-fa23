@@ -1,0 +1,19 @@
+[
+    { 
+        "id":"4907C0314C734DADA6AB6284A22FFAC8",
+        "factory_id":"6715-RHFVH","icon_url":"/assets/fallback/default_icon.png",
+        "name":"iBeacon Test",
+        "latitude":null,
+        "longitude":null,
+        "gimbal_latitude":null,
+        "gimbal_longitude":null,
+        "gimbal_location_last_updated_date":null,
+        "visibility":"Public",
+        "battery_level":"Med-LOW",
+        "battery_updated_date":"2014-07-04T15:12:08.000Z",
+        "hardware":"Series 10",
+        "owner":"SELF",
+        "contact_emails":[],
+        "beacon_attributes":{}
+    }
+]
