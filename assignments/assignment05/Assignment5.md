@@ -70,8 +70,13 @@ Write a Python script named `readBeacons.py` that does the following:
    * Display the `Hardware` field
    * Display the `battery_level` field
    * Display the `battery_updated_date` field
-* Display a count of the total number of beacons present in the file     
+* Display a count of the total number of beacons present in the file   
 
+For testing, use individual JSON files for this task.
+
+* There are two examples from Lecture 18 via the class repository that can also be used. You can find them in the class repository under lectures / Lecture18 and the files are named `Example-Single.json` and `Example-Double.json`.  You should start with these files.       
+* The individual JSON files contain one particular sub-set of the JSON files from the various datasets.  You should work with these files next for validation.
+ 
 ## Task 4 - Do the Task
 
 Write a Python script named `checkBeacons.py` that does the following:
@@ -84,6 +89,9 @@ Write a Python script named `checkBeacons.py` that does the following:
 * If the argument `-lowbat` is include:
   * Output a CSV friendly list containing `factory_id, name, Hardware, battery_level, battery_updated_date` to standard out
 * Otherwise, output that same information for all beacons to standard out
+   * If `-lowbat` is not an argument, show the information for all of the beacons 
+
+The data files can be found on Canvas in the Files / Assignments / Assignment05 folder.  The `.zip` files contain a directory with 60 to 80 `.json` files.  Each of the `.zip` files is for a particular day.
 
 ### Extra Credit
 
@@ -104,6 +112,36 @@ The submission will be the same procedure as past assignments.  That means:
 * Submit the hash of your final commit via Canvas
 * In your `README.md`, feel free to add any additional commentary about what works or does not work with your code. You should also note if you are attempting the extra credit
 
-## Rubric
+Your final submission should contain the following in the `assignment05` subdirectory:
 
-TBA         
+* `README.md`
+* `readBeacons.py`
+* `checkBeacons.py`
+
+## Rubric  
+
+### General Mechanics - 10 points
+
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Evidence of branching
+   * Or an appropriate explanation in your README.md or on Canvas 
+* 1 pt - More thane one commit visible on GitHub with appropriate commit messages
+* 1 pt - Inclusion of only the relevant source code / correct usage as needed of `.gitignore` or selective inclusion of files
+* 4 pts - Good / well-structured code
+
+### Task 3 - `readBeacons.py` - 12 pts
+
+* 1 pt - Runs correctly via the shebang
+* 3 pts - Displays each of the requested pieces of data (0.5 pts each)
+* 6 pts - Runs correctly across various good inputs
+* 2 pts - Handles robustly various bad inputs
+
+### Task 4 - `checkBeacons.py` - 14 pts
+
+* 1 pt - Runs correctly via the shebang
+* 2 pts - Correctly processes all JSON files in a directory
+* 10 pts - Runs correctly across various good inputs
+* 4 pts - Handles robustly various bad inputs / bad files
+ 
