@@ -28,7 +28,7 @@ As needed, you may want to read up a bit on the [rebase](https://www.atlassian.c
 
 ## Task 2 - Understanding the Problem
 
-For a project that Prof. Striegel's had a few years back named [Teserae](https://tesserae.nd.edu), the crux of the project was to study the extent to which various ubiquitous computing devices could predict workplace performance. One of the components involved in the study were Bluetooth beacons, specifically a Bluetooth beacon from a company formerly named [Gimbal](https://infillion.com/commerce/beacons/).  
+For a project that Prof. Striegel's had a few years back named [Tesserae](https://tesserae.nd.edu), the crux of the project was to study the extent to which various ubiquitous computing devices could predict workplace performance. One of the components involved in the study were Bluetooth beacons, specifically a Bluetooth beacon from a company formerly named [Gimbal](https://infillion.com/commerce/beacons/).  
 
 Bluetooth beacons take advantage of Bluetooth Low Energy (aka Bluetooth 4.0) and emit an advertisement several times per second.  For the purpose of the study, the beacons were used to note when individuals were potentially at certain relevant locations (e.g. work).  
 
