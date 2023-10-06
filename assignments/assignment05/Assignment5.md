@@ -89,7 +89,8 @@ Write a Python script named `checkBeacons.py` that does the following:
 * If the argument `-lowbat` is include:
   * Output a CSV friendly list containing `factory_id, name, Hardware, battery_level, battery_updated_date` to standard out
 * Otherwise, output that same information for all beacons to standard out
-   * If `-lowbat` is not an argument, show the information for all of the beacons 
+   * If `-lowbat` is not an argument, show the information for all of the beacons
+   * The format should be the same as the `-lowbat` case, e.g. a CSV style output to standard out 
 
 The data files can be found on Canvas in the Files / Assignments / Assignment05 folder.  The `.zip` files contain a directory with 60 to 80 `.json` files.  Each of the `.zip` files is for a particular day.
 
