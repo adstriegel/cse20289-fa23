@@ -86,8 +86,9 @@ Write a Python script named `checkBeacons.py` that does the following:
 * Scan that directory for all JSON files
 * Display the number of JSON files
 * Display the number of beacons
-* If the argument `-lowbat` is include:
-  * Output a CSV friendly list containing `factory_id, name, Hardware, battery_level, battery_updated_date` to standard out
+* If the argument `-lowbat` is included:
+  * Output a CSV friendly list containing `factory_id, name, Hardware, battery_level, battery_updated_date` to standard out for any beacons with a low battery
+  * It is up to you if you want to do that for medium-low or just low, be sure to note that in your `README.md` if you make a choice.
 * Otherwise, output that same information for all beacons to standard out
    * If `-lowbat` is not an argument, show the information for all of the beacons
    * The format should be the same as the `-lowbat` case, e.g. a CSV style output to standard out 
