@@ -126,7 +126,7 @@ The submission will be the same procedure as with Assignment 1.  That means:
 
 ## Rubric
 
-**Total**: 40 points
+**Total**: 50 points
 
 ### General Mechanics - 6 points
 
