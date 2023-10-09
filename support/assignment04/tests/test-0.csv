@@ -1,0 +1,29 @@
+################################################################
+# abuse.ch URLhaus Database Dump (CSV - online URLs only)      #
+# Last updated: 2023-09-23 20:28:07 (UTC)                      #
+#                                                              #
+# Terms Of Use: https://urlhaus.abuse.ch/api/                  #
+# For questions please contact urlhaus [at] abuse.ch           #
+################################################################
+#
+# id,dateadded,url,url_status,last_online,threat,tags,urlhaus_link,reporter
+"2713604","2023-09-23 20:28:07","http://103.131.57.59/m68k","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713604/","tolisec"
+"2713605","2023-09-23 20:28:07","http://103.131.57.59/sh4","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713605/","tolisec"
+"2713606","2023-09-23 20:28:07","http://103.131.57.59/x86_64","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713606/","tolisec"
+"2713607","2023-09-23 20:28:07","http://103.131.57.59/mpsl","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713607/","tolisec"
+"2713608","2023-09-23 20:28:07","http://103.131.57.59/arm5","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713608/","tolisec"
+"2713609","2023-09-23 20:28:07","http://103.131.57.59/arm","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713609/","tolisec"
+"2713610","2023-09-23 20:28:07","http://103.131.57.59/ppc","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713610/","tolisec"
+"2713611","2023-09-23 20:28:07","http://103.131.57.59/arm6","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713611/","tolisec"
+"2713612","2023-09-23 20:28:07","http://103.131.57.59/arm7","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713612/","tolisec"
+"2713613","2023-09-23 20:28:07","http://103.131.57.59/x86","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713613/","tolisec"
+"2713614","2023-09-23 20:28:07","http://103.131.57.59/mips","online","2023-09-23 20:28:07","malware_download","elf","https://urlhaus.abuse.ch/url/2713614/","tolisec"
+"2713603","2023-09-23 20:23:06","http://200.81.166.158:44866/bin.sh","online","2023-09-23 20:23:06","malware_download","32-bit,elf,mips,Mozi","https://urlhaus.abuse.ch/url/2713603/","geenensp"
+"2713602","2023-09-23 20:19:06","http://122.241.72.58:54407/Mozi.m","online","2023-09-23 20:19:06","malware_download","elf,Mozi","https://urlhaus.abuse.ch/url/2713602/","lrz_urlhaus"
+"2713596","2023-09-23 20:10:13","http://146.19.191.85/other/softbot.m68k","online","2023-09-23 20:10:13","malware_download","elf","https://urlhaus.abuse.ch/url/2713596/","tolisec"
+"2713597","2023-09-23 20:10:13","http://146.19.191.85/other/softbot.mpsl","online","2023-09-23 20:17:59","malware_download","elf","https://urlhaus.abuse.ch/url/2713597/","tolisec"
+"2713598","2023-09-23 20:10:13","http://146.19.191.85/other/softbot.sh4","online","2023-09-23 20:16:10","malware_download","elf","https://urlhaus.abuse.ch/url/2713598/","tolisec"
+"2713599","2023-09-23 20:10:13","http://146.19.191.85/other/softbot.x586","online","2023-09-23 20:24:06","malware_download","elf","https://urlhaus.abuse.ch/url/2713599/","tolisec"
+"2713600","2023-09-23 20:10:13","http://146.19.191.85/other/softbot.mips","online","2023-09-23 20:18:50","malware_download","elf","https://urlhaus.abuse.ch/url/2713600/","tolisec"
+"2713601","2023-09-23 20:10:13","http://146.19.191.85/other/softbot.arm6","online","2023-09-23 20:10:13","malware_download","elf","https://urlhaus.abuse.ch/url/2713601/","tolisec"
+"2713593","2023-09-23 20:10:12","http://146.19.191.85/other/softbot.arm7","online","2023-09-23 20:17:05","malware_download","elf","https://urlhaus.abuse.ch/url/2713593/","tolisec"
