@@ -15,12 +15,33 @@ NetID=$1
 
 DirRepo="student-cse20289-fa23-$NetID"
 
+InData=input/assignment04
+
+OutFile=scoring/assignment04/$NetID-Score.txt
+OutputFile=scoring/assignment04/$NetID-Output.txt
+
+RelPathStudent=$DirRepo/assignments/assignment04
+
+
 # Check if the NETID exists
 if [[ ! -d $DirRepo ]]; then
     echo "NETID $1 repository does not exist"
     echo "  Expecting $DirRepo"
     exit 1
 fi
+
+# Reset the scoring file for this grading
+echo "Assignment 4 - Grading" > $OutFile
+echo "Assignment 4 - Grading ($NetID)" > $OutputFile
+
+# Create the top matter
+echo "" >> $OutFile
+echo "Net ID: $NetID" >> $OutFile   
+
+echo "" >> $OutFile
+echo "Base Points: 50" >> $OutFile
+
+
 
 # Check that the assignments directory is present
 if [[ ! -d $DirRepo/assignments ]]; then
@@ -46,24 +67,7 @@ if [[ ! -d scoring/assignment04 ]]; then
     mkdir scoring/assignment04 
 fi
 
-InData=input/assignment04
 
-OutFile=scoring/assignment04/$NetID-Score.txt
-OutputFile=scoring/assignment04/$NetID-Output.txt
-
-RelPathStudent=$DirRepo/assignments/assignment04
-
-# Reset the scoring file for this grading
-echo "Assignment 4 - Grading" > $OutFile
-
-echo "Assignment 4 - Grading ($NetID)" > $OutputFile
-
-# Create the top matter
-echo "" >> $OutFile
-echo "Net ID: $NetID" >> $OutFile   
-
-echo "" >> $OutFile
-echo "Base Points: 50" >> $OutFile
 
 echo "" >> $OutFile
 echo "=== Manual Inspection ===" >> $OutFile 
@@ -133,37 +137,37 @@ if [[ ! -e $RelPathStudent/evalbad.sh ]]; then
 else
     chmod +x $RelPathStudent/evalbad.sh
     echo "Test 0" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-0.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-0.csv >> $OutputFile 2>&1
 
     echo "Test 1" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-1.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-1.csv >> $OutputFile 2>&1
 
     echo "Test 2" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-2.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-2.csv >> $OutputFile 2>&1
 
     echo "Test 3" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-3.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-3.csv >> $OutputFile 2>&1
 
     echo "Test 4" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 2>&1
 
     echo "Test 0 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 2>&1
 
     echo "Test 3 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 2>&1
 
     echo "Test 4 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 2>&1
 
     echo "" >> $OutputFile
-    echo "* Bad Inputs" >> $OutputFile
+    echo "* Bad Inputs" >> $OutputFile 2>&1
 
-    echo "No Argument" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh >> $OutputFile 
+    echo "No Argument" >> $OutputFile 2>&1
+    sh $RelPathStudent/evalbad.sh >> $OutputFile 2>&1 
 
     echo "No File" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 
+    sh $RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 2>&1
 fi
 
 echo "" >> $OutFile
@@ -182,37 +186,37 @@ if [[ ! -e $RelPathStudent/evalbad.py ]]; then
     echo "* NO evalbad.py is present *" >> $OutputFile    
 else
     echo "Test 0" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-0.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-0.csv >> $OutputFile 2>&1
 
     echo "Test 1" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-1.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-1.csv >> $OutputFile 2>&1
 
     echo "Test 2" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-2.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-2.csv >> $OutputFile 2>&1
 
     echo "Test 3" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-3.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-3.csv >> $OutputFile 2>&1
 
     echo "Test 4" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 2>&1
 
     echo "Test 0 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-0.csv top >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-0.csv top >> $OutputFile 2>&1
 
     echo "Test 3 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 2>&1
 
     echo "Test 4 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 2>&1
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile
 
     echo "No Argument" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py >> $OutputFile 2>&1
 
     echo "No File" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-5.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-5.csv >> $OutputFile 2>&1 
 fi
 
 echo "" >> $OutFile
@@ -222,10 +226,12 @@ echo "" >> $OutFile
 if [[ ! -e $RelPathStudent/test ]]; then
     echo "* NO test directory is present *" >> $OutputFile    
 else
-    echo "" >> $OutFile
+    echo "= test directory contents =" >> $OutFile
     ls -R -l $RelPathStudent/test >> $OutputFile 
     echo "" >> $OutFile
 fi
+
+echo "= test.sh =" >> $OutputFile
 
 if [[ ! -e $RelPathStudent/test/test.sh ]]; then
     echo "* NO test.sh is present *" >> $OutputFile    
