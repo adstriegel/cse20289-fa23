@@ -147,22 +147,22 @@ else
     sh $RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
 
     echo "Test 0 (top)" >> $OutputFile
-    sh /$RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 
+    sh $RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 
 
     echo "Test 3 (top)" >> $OutputFile
-    sh /$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 
+    sh $RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 
 
     echo "Test 4 (top)" >> $OutputFile
-    sh /$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
+    sh $RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile
 
     echo "No Argument" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh >> $OutputFile 
+    sh $RelPathStudent/evalbad.sh >> $OutputFile 
 
     echo "No File" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 
+    sh $RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 
 fi
 
 echo "" >> $OutFile
@@ -196,13 +196,13 @@ else
     python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 
 
     echo "Test 0 (top)" >> $OutputFile
-    python3 /$RelPathStudent/evalbad.py $InData/test-0.csv top >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-0.csv top >> $OutputFile 
 
     echo "Test 3 (top)" >> $OutputFile
-    python3 /$RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 
 
     echo "Test 4 (top)" >> $OutputFile
-    python3 /$RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 
+    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile
