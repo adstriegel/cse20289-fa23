@@ -158,7 +158,7 @@ else
     ./$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 2>&1
 
     echo "Test 4 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 2>&1
+    ./$RelPathStudent/evalbad.sh $InData/test-4.csv top >> $OutputFile 2>&1
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile 2>&1
@@ -207,7 +207,7 @@ else
     python3 $RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 2>&1
 
     echo "Test 4 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 2>&1
+    python3 $RelPathStudent/evalbad.py $InData/test-4.csv top >> $OutputFile 2>&1
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile
