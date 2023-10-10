@@ -40,7 +40,7 @@ do
             echo 'No repo present for $FldNetID'
         else
             cd $DirCorrect
-            print '  Confirming repository for %s\n' "$FldNetID"
+            printf '  Confirming repository for %s\n' "$FldNetID"
             git pull
             printf ' Grading repository for %s\n' "$FldNetID"
             cd ..
