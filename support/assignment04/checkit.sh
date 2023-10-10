@@ -131,29 +131,30 @@ echo "" >> $OutputFile
 if [[ ! -e $RelPathStudent/evalbad.sh ]]; then
     echo "* NO evalbad.sh is present *" >> $OutputFile    
 else
+    chmod +x $RelPathStudent/evalbad.sh
     echo "Test 0" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-0.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-0.csv >> $OutputFile 
 
     echo "Test 1" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-1.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-1.csv >> $OutputFile 
 
     echo "Test 2" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-2.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-2.csv >> $OutputFile 
 
     echo "Test 3" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-3.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-3.csv >> $OutputFile 
 
     echo "Test 4" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
 
     echo "Test 0 (top)" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 
 
     echo "Test 3 (top)" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 
 
     echo "Test 4 (top)" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
+    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile
