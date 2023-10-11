@@ -137,37 +137,37 @@ if [[ ! -e $RelPathStudent/evalbad.sh ]]; then
 else
     chmod +x $RelPathStudent/evalbad.sh
     echo "Test 0" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-0.csv >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-0.csv >> $OutputFile 2>&1
 
     echo "Test 1" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-1.csv >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-1.csv >> $OutputFile 2>&1
 
     echo "Test 2" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-2.csv >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-2.csv >> $OutputFile 2>&1
 
     echo "Test 3" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-3.csv >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-3.csv >> $OutputFile 2>&1
 
     echo "Test 4" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-4.csv >> $OutputFile 2>&1
 
     echo "Test 0 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-0.csv top >> $OutputFile 2>&1
 
     echo "Test 3 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-3.csv top >> $OutputFile 2>&1
 
     echo "Test 4 (top)" >> $OutputFile
-    ./$RelPathStudent/evalbad.sh $InData/test-4.csv top >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-4.csv top >> $OutputFile 2>&1
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile 2>&1
 
     echo "No Argument" >> $OutputFile 2>&1
-    sh $RelPathStudent/evalbad.sh >> $OutputFile 2>&1 
+    time ./$RelPathStudent/evalbad.sh >> $OutputFile 2>&1 
 
     echo "No File" >> $OutputFile
-    sh $RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 2>&1
+    time ./$RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 2>&1
 fi
 
 echo "" >> $OutFile
@@ -186,37 +186,37 @@ if [[ ! -e $RelPathStudent/evalbad.py ]]; then
     echo "* NO evalbad.py is present *" >> $OutputFile    
 else
     echo "Test 0" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-0.csv >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-0.csv >> $OutputFile 2>&1
 
     echo "Test 1" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-1.csv >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-1.csv >> $OutputFile 2>&1
 
     echo "Test 2" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-2.csv >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-2.csv >> $OutputFile 2>&1
 
     echo "Test 3" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-3.csv >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-3.csv >> $OutputFile 2>&1
 
     echo "Test 4" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-4.csv >> $OutputFile 2>&1
 
     echo "Test 0 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-0.csv top >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-0.csv top >> $OutputFile 2>&1
 
     echo "Test 3 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-3.csv top >> $OutputFile 2>&1
 
     echo "Test 4 (top)" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-4.csv top >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py $InData/test-4.csv top >> $OutputFile 2>&1
 
     echo "" >> $OutputFile
     echo "* Bad Inputs" >> $OutputFile
 
     echo "No Argument" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py >> $OutputFile 2>&1
+    time python3 $RelPathStudent/evalbad.py >> $OutputFile 2>&1
 
     echo "No File" >> $OutputFile
-    python3 $RelPathStudent/evalbad.py $InData/test-5.csv >> $OutputFile 2>&1 
+    time python3 $RelPathStudent/evalbad.py $InData/test-5.csv >> $OutputFile 2>&1 
 fi
 
 echo "" >> $OutFile
