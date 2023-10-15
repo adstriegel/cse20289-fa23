@@ -170,8 +170,6 @@ else
     ./$RelPathStudent/evalbad.sh $InData/test-5.csv >> $OutputFile 2>&1
 fi
 
-exit 1
-
 echo "" >> $OutFile
 echo "=== Task 3b - Python Script ===" >> $OutFile 
 echo "" >> $OutFile
