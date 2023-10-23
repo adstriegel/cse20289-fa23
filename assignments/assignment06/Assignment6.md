@@ -89,7 +89,10 @@ You should write the two Python scripts and the measurement shell script.
    * The code should have three parts: loading the data, processing the data via `map`, and reporting the results to stdout. 
    * The code should measure how long each of the three parts take as well.
 * `measure.sh`: A shell script that uses the UNIX `time` command.  The script should measure the performance of `parbeacon.py` taking in four full directories (your choice) with 1, 2, or 4 processes. 
-   * Record those results in your README.md
+   * The script should take in two arguments: the name of the Python script to test and input file with the four directories to process  
+   * Put the directories for testing in a file named `measure-in.txt`
+   * Discuss and make a small table or list of results in your README.md
+   * Note: Do not put the actual data in your repository
 
 Your `parbeacon.py` should also be reasonably robust to bad / improper inputs.
 
@@ -115,6 +118,10 @@ Your final submission should contain the following in the `assignment06` subdire
 * `README.md`: This includes the results of how fast your code runs under 1, 2, and 4 processes.  That includes the breakout for the total run-time as well as the sub-components of your code (loading, processing, output).  
 * `analyze.py`: Your analysis code
 * `parbeacon.py`: A Python script that can be run directly via the command prompt and takes in the arguments as noted earlier
+   * This should be directly excecutable courtesy of the shebang
+* `measure.sh`: Shell script that runs a specific set of measurement cases
+   * This should take in two input arguments - the name of the script to test and the file with the data directories for testing 
+* `measure-in.txt`: A file containing four directories for usage in testing
 
 ## Rubric 
 
