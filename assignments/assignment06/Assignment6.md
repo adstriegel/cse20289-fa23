@@ -65,9 +65,11 @@ where `N` is the number of processes to use, `S` is the setting for processing t
    * `missing`: Check if a beacon has not been seen for a week or more
    * `missinglow`: Check if a beacons has not been for a week and has a low battery
 
-`D0`, `D1`, `D2` are directories of JSON files in a similar arrangement to the directories that you analyzed in Assignment 5.  There must be at least one directory present with a limit of **ten** directories. Note that the directory name must be formatted as a date (YYYY-MM-DD) to be considered valid.      
+`D0`, `D1`, `D2` are directories of JSON files in a similar arrangement to the directories that you analyzed in Assignment 5.  There must be at least one directory present with a limit of **ten** directories. Note that the directory name must be formatted as a date (YYYY-MM-DD) to be considered valid. Example data files are present as zip files similar to Assignment 5 with a broader set of data files posted in Canvas.        
 
-Your code should use `map` for the determination of the three processing options and it should call the functions that you wrote for analysis.        
+Your code should use `map` for the determination of the three processing options and it should call the functions that you wrote for analysis.  
+
+For the output, follow a similar approach to what you did for Assignment 5.      
 
 ### Measure
 
@@ -125,8 +127,56 @@ Your final submission should contain the following in the `assignment06` subdire
 
 ## Rubric 
 
-To be added
-              
+### General Mechanics - 6 points
 
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Evidence of branching
+   * Or an appropriate explanation in your README.md or on Canvas 
+* 1 pt - More thane one commit visible on GitHub with appropriate commit messages
+* 1 pt - Inclusion of only the relevant source code / correct usage as needed of `.gitignore` or selective inclusion of files
 
+### Analysis Code (analyze.py) - 5 pts
+
+* 1 pt - Contains 2 or more functions
+* 2 pts - Code is well-written and well-structured
+* 1 pt - Provides low bat functionality
+* 1 pt - Provide missing functionality 
+
+### Parallelization Code (parbeacon.py) - 27 pts
+
+`Base Test Cases`: 
+
+    ./parbeacon.py 2 missing 
+    ./parbeacon.py 2 lowbat 
+    ./parbeacon.py 2 missinglow     
+
+* 1 pt - Contains a proper shebang for the student machines
+* 1 pt - Code properly invokes functions from analyze.py
+* 1 pt - Correctly takes proper argument inputs
+* 2 pt - Properly uses map and process pools
+* 2 pt - Base test case for lowbat
+* 2 pt - Base test case for missing
+* 2 pt - Base test case for missinglow
+* 8 pts - Responds to a variety of test cases   
+* 3 pts - Properly handles bad / missing inputs
+* 3 pts - Measures time of the three components              
+* 2 pts - Code is well-structured / written
+
+### Measurement Script (measure.sh) - 4 pts
+
+* 1 pt - Input text file (`measure-in.txt`) is present / well-structured
+* 1 pt - Script is well-structured / written
+* 2 pt - Each test case is properly enumerated and runs successfully
+
+### Results via README.md - 9 pts
+
+* 3 pts - Results are properly stated for various Python script components 
+* 4 pts - Results from the measure.sh script are listed with good formatting
+* 2 pts - Results are discussed and analzyed
+
+### Extra Credit (lambeacon.py) - Up to 6 points
+
+* Up to 6 points - usage of lambda, comparison of results stated / analyzed in README.md (separate from parbeacon.py)
 
