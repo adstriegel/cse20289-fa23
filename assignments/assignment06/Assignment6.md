@@ -148,9 +148,9 @@ Your final submission should contain the following in the `assignment06` subdire
 
 `Base Test Cases`: 
 
-    ./parbeacon.py 2 missing 
-    ./parbeacon.py 2 lowbat 
-    ./parbeacon.py 2 missinglow     
+    ./parbeacon.py 2 missing ~/data/2019-01-10 ~/data/2019-01-14 
+    ./parbeacon.py 2 lowbat ~/data/2019-01-10 ~/data/2019-01-14
+    ./parbeacon.py 2 missinglow ~/data/2019-01-10 ~/data/2019-01-14    
 
 * 1 pt - Contains a proper shebang for the student machines
 * 1 pt - Code properly invokes functions from analyze.py
