@@ -1,0 +1,56 @@
+
+===================
+Output - test0.csv
+Parsing test-0.csv
+IP Addresses: 20
+Host Names: 0
+Most Frequent: 103.131.57.59 occurred 11 times
+
+real	0m0.074s
+user	0m0.039s
+sys	0m0.017s
+ 
+===================
+Output - test1.csv
+Parsing test-1.csv
+IP Addresses: 94
+Host Names: 6
+Most Frequent: 103.131.57.59 occurred 11 times
+
+real	0m0.039s
+user	0m0.024s
+sys	0m0.008s
+ 
+===================
+Output - test2.csv
+Parsing test-2.csv
+IP Addresses: 2497
+Host Names: 1112
+Most Frequent: github.com occurred 129 times
+
+real	0m0.053s
+user	0m0.038s
+sys	0m0.008s
+ 
+===================
+Output - test3.csv
+Parsing test-3.csv
+IP Addresses: 4544
+Host Names: 3182
+Most Frequent: vk.com occurred 167 times
+
+real	0m0.070s
+user	0m0.054s
+sys	0m0.008s
+ 
+===================
+Output - test4.csv
+Parsing test-4.csv
+IP Addresses: 2506
+Host Names: 1029
+Most Frequent: github.com occurred 129 times
+
+real	0m0.054s
+user	0m0.038s
+sys	0m0.008s
+ 
