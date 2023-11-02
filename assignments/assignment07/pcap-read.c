@@ -16,7 +16,7 @@
 #include "pcap-read.h"
 #include "pcap-process.h"
 
-#define SHOW_DEBUG	1
+#define SHOW_DEBUG	0
 
 char parsePcapFileStart (FILE * pTheFile, struct FilePcapInfo * pFileInfo)
 {
@@ -113,6 +113,11 @@ struct Packet * readNextPacket (FILE * pTheFile, struct FilePcapInfo * pFileInfo
 {
 	struct Packet * 	pPacket;
 
+	if(SHOW_DEBUG) 
+	{
+		printf("DEBUG: Requesting the default packet buffer size of %d\n", DEFAULT_READ_BUFFER);
+	}
+
 	pPacket = allocatePacket(DEFAULT_READ_BUFFER);
 
 	/* Read the packet from the file
@@ -123,6 +128,7 @@ struct Packet * readNextPacket (FILE * pTheFile, struct FilePcapInfo * pFileInfo
 
 	if(SHOW_DEBUG) 
 	{
+		printf("DEBUG: Packet structure is %p\n", pPacket);
 		printf("DEBUG: Reading in metadata (time, length, actual length)\n");
 		printf("DEBUG:   Targeted amount is 16 bytes in total\n");
 	}

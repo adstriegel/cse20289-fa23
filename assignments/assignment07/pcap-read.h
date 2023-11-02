@@ -2,7 +2,9 @@
 #ifndef __PCAP_READ_H
 #define __PCAP_READ_H
 
-#define DEFAULT_READ_BUFFER     1442
+/* Note: Increased this to accommodate raw WiFi packets 
+     Make sure to test later */
+#define DEFAULT_READ_BUFFER     2500
 
 #include <stdio.h>
 #include <stdlib.h>

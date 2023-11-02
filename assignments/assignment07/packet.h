@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <sys/time.h>
 
-#define PKT_SIZE_LIMIT  1024
+#define PKT_SIZE_LIMIT  1500
 
 /* A data packet as parsed from a pcap file 
  * 

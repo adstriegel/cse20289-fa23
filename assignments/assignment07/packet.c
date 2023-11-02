@@ -5,13 +5,15 @@
 
 #include "packet.h"
 
-
 struct Packet * allocatePacket (uint16_t DataSize)
 {
     struct Packet * pPacket;
 
-    if(DataSize >= PKT_SIZE_LIMIT)
+    if(DataSize > PKT_SIZE_LIMIT)
     {   
+        /* Removed - causing issues */
+        /* Future: Make sure to test for this on a return */
+        // printf("Error - Requested data size (%d) was too big (more than %d)\n", DataSize, PKT_SIZE_LIMIT);
         return NULL;
     }
 
