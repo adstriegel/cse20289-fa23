@@ -75,11 +75,22 @@ As a subtle hint, this is probably a pretty great place to do a commit as part o
 The code compiles but results in a segfault when attempting to run the code.  You can invoke the code in the following manner:
 
 ```
+$ ./redextract data/testFile.pcap
+MAIN: Initializing the table for redundancy extraction
+MAIN: Initializing the table for redundancy extraction ... done
+MAIN: Attempting to read in the file named data/testFile.pcap
+Segmentation fault (core dumped)
+$
 $ ./redextract data/TestSmall.pcap
+MAIN: Initializing the table for redundancy extraction
+MAIN: Initializing the table for redundancy extraction ... done
+MAIN: Attempting to read in the file named data/TestSmall.pcap
+Segmentation fault (core dumped)
 ```
 
 It is your job to figure out where / how / why the segfault is occurring.   You have a couple of ways that you can go about debugging:
 
+* *Inspect the code*: Are there any built-in mechanisms in the code that are otherwise disabled? Could you turn them on easily?
 * *Divide and conquer via printf:* Add in or enable various output statements to try to figure out which line the segfault is occurring.  Remember that in order to force output via `STDOUT`, you need a `\n` in your `printf`.  
 * *Use gdb*: `gdb` allows you to set breakpoints as well as provide a better catch as to the where / why the segfault occurred. You can also tinker with `valgrind` though that is probably less useful.  
 * *Output various values:* It can sometimes be helpful to output the various values contained within various variables (including members of structs).  Try to think what might make a segfault happen.  
@@ -87,6 +98,21 @@ It is your job to figure out where / how / why the segfault is occurring.   You 
 You can modify the code as you see fit to fix the segfault provided that the code runs correctly overall.  When you fix the segfault (or segfaults - there may be more than one), you will definitely know.
 
 Remember, a key skill for a programmer is the ability to instrument and understand existing code.  As programmers, writing new code can be fun / exciting but there is often ample effort invested in resolving existing code issues.
+
+If all goes well, you should see the following output at the conclusion of running the code:
+
+```
+$ ./redextract data/testFile.pcap
+...
+File processing complete - data/testFile.pcap file read containing 430 packets with 441321 bytes of packet data
+Summarizing the processed entries
+Parsing of file data/testFile.pcap complete
+  Total Packets Parsed:    430
+  Total Bytes   Parsed:    441321
+  Total Packets Duplicate: 0
+  Total Bytes   Duplicate: 0
+  Total Duplicate Percent:   0.00%
+```
 
 **Note:** While this class generally has a fairly liberal policy when it comes to the usage of ChatGPT and other tools, this is one assignment where you are asked to not use the tool so as to sharpen your debugging skills.  You are welcome to ask for help via Slack from the instructor and TAs.  
 
