@@ -145,7 +145,27 @@ Remember, you can look in Task 2 to see what should be present in your repositor
 
 ## Rubric
 
-To be added mid-week
+### General Mechanics - 6 points
 
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Evidence of branching
+   * Or an appropriate explanation in your README.md or on Canvas 
+* 1 pt - More thane one commit visible on GitHub with appropriate commit messages
 
-      
+### Makefile Improvements - 5 points
+
+* 3 pts - Proper Makefile as prescribed
+* 1 pt - Proper .gitignore
+* 1 pt - Only the correct files present in the submission courtesy of .gitignore
+
+### Segfault Detection - 8 points
+
+* 5 pts - Code runs properly without segfaults and provides correct results
+* 3 pts - Proper documentation of the fixes in README.md
+
+### Memory Leak Detection - 8 points
+
+* 5 pts - Code runs without memory leaks
+* 3 pts - Proper documentation of the fixes in README.md
