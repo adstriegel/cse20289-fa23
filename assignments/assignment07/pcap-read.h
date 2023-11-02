@@ -2,7 +2,7 @@
 #ifndef __PCAP_READ_H
 #define __PCAP_READ_H
 
-#define DEFAULT_READ_BUFFER     2500
+#define DEFAULT_READ_BUFFER     1442
 
 #include <stdio.h>
 #include <stdlib.h>

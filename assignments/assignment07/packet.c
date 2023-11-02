@@ -10,7 +10,7 @@ struct Packet * allocatePacket (uint16_t DataSize)
 {
     struct Packet * pPacket;
 
-    if(DataSize > PKT_SIZE_LIMIT)
+    if(DataSize >= PKT_SIZE_LIMIT)
     {   
         return NULL;
     }

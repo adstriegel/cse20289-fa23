@@ -16,8 +16,7 @@
 #include "pcap-read.h"
 #include "pcap-process.h"
 
-#define SHOW_DEBUG	0
-
+#define SHOW_DEBUG	1
 
 char parsePcapFileStart (FILE * pTheFile, struct FilePcapInfo * pFileInfo)
 {
@@ -122,6 +121,12 @@ struct Packet * readNextPacket (FILE * pTheFile, struct FilePcapInfo * pFileInfo
 		Actual Length		32 bits  
 	*/
 
+	if(SHOW_DEBUG) 
+	{
+		printf("DEBUG: Reading in metadata (time, length, actual length)\n");
+		printf("DEBUG:   Targeted amount is 16 bytes in total\n");
+	}
+
 	fread((char *) &(pPacket->TimeCapture.tv_sec), 1, sizeof(uint32_t), pTheFile);
 	fread((char *) &(pPacket->TimeCapture.tv_usec), 1, sizeof(uint32_t), pTheFile);
 	fread((char *) &(pPacket->LengthIncluded), 1, sizeof(uint32_t), pTheFile);
@@ -149,11 +154,19 @@ struct Packet * readNextPacket (FILE * pTheFile, struct FilePcapInfo * pFileInfo
 		printf("DEBUG: Applied endian fix (if needed)\n");
 	}
 
-	fread(pPacket->Data, pPacket->LengthIncluded, 1, pTheFile);
+	if(SHOW_DEBUG)
+	{
+		printf("DEBUG: Packet destination buffer: %p\n", pPacket->Data);
+		printf("DEBUG: Copying in %d bytes into the buffer of %d bytes\n", pPacket->LengthIncluded, pPacket->SizeDataMax );
+	}
+
+	int nReadBytes;
+
+	nReadBytes = fread(pPacket->Data, 1, pPacket->LengthIncluded, pTheFile);
 
 	if(SHOW_DEBUG) 
 	{
-		printf("DEBUG: Read all of the data\n");
+		printf("DEBUG: Read all of the data (%d bytes)\n", nReadBytes);
 	}
 
 	pFileInfo->Packets++;
@@ -161,7 +174,10 @@ struct Packet * readNextPacket (FILE * pTheFile, struct FilePcapInfo * pFileInfo
 
 	if(SHOW_DEBUG)
 	{
-		printf("Packet %d Info: t=%ld.%08d of %d bytes long (%d on the wire) \n", pFileInfo->Packets-1, (long int) pPacket->TimeCapture.tv_sec, (int) pPacket->TimeCapture.tv_usec, pPacket->LengthIncluded, pPacket->LengthOriginal);
+		printf("INFO:  Packet %d Info: t=%ld.%08d of %d bytes long (%d on the wire) \n", pFileInfo->Packets-1, (long int) pPacket->TimeCapture.tv_sec, (int) pPacket->TimeCapture.tv_usec, pPacket->LengthIncluded, pPacket->LengthOriginal);
+		printf("TALLY: Total Packets Read: %d\n", pFileInfo->Packets);
+		printf("TALLY: Total Bytes Read: %d\n", pFileInfo->BytesRead);
+		printf("Pkt Info Ptr: %p\n", pPacket);
 	}
 
 	return pPacket;
