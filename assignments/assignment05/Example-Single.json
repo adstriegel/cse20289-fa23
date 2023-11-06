@@ -1,7 +1,8 @@
 [
     { 
         "id":"4907C0314C734DADA6AB6284A22FFAC8",
-        "factory_id":"6715-RHFVH","icon_url":"/assets/fallback/default_icon.png",
+        "factory_id":"6715-RHFVH",
+        "icon_url":"/assets/fallback/default_icon.png",
         "name":"iBeacon Test",
         "latitude":null,
         "longitude":null,

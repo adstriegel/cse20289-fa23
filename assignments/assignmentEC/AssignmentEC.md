@@ -2,7 +2,7 @@
 
 **Assigned:** Sunday, November 5th
 
-**Due Date**: Friday, November 15th, 10 PM
+**Due Date**: Friday, November 17th, 10 PM
 
 **Early Submission:** None - it is extra credit
 
