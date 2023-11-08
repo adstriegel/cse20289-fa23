@@ -184,12 +184,6 @@ FAILURE - No more records
 exit
 ```
 
-### Tasks 4e, 4f - Server / Client - Missing
-
-* Add in the `missing` functionality from Assignment 5.  Use the data of the directory as the reference point.  This should be tracked on the server side.
-* The `missing` functionality should follow a similar behavior to the `lowbat` query
-
-
 ### Task 5 - Choose Your Features
 
 At this point, the code as robustly written will get you to 85 percent of the potential score.  Your task is then to improve the code and add in functionality that you feel appropriate to get to a higher score.  You may choose whatever you see is fit to get there or simply call it good at 85 percent.
@@ -200,6 +194,7 @@ Examples of potential functionality includes:
 * Add in the ability to `refresh` the JSON information from the web server with a refresh
 * Add in the ability to change the directory to a different data directory.  There are several other directories present that you can find in the `extra-data.txt` file in the `data` sub-directory in `assignment08` in the class repository.
 * Add in the ability to query for beacon factory IDs using regular expressions.  
+* Add in the `missing` functionality from Assignment 5.  Use the data of the directory as the reference point.  This should be tracked on the server side.
 
 ## Submission
 
