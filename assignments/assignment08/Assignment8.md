@@ -10,6 +10,18 @@
 
 In this assignment, we will be bringing together multiple components that we have discussed in class.  Specifically, we will be doing a blend of Python and C programming whereby we have one process written in Python connected via the network via an approach called ZMQ (Zero Message Queuing) to our C code.  Furthermore, we will also add in requests from a remote web server for the data that will be processed by Python.  
 
+## Task 0 - Update Your Path
+
+We will be adding Prof. Bui's `pythin` installation to your path.  Do this either by modifying your profile script with the following line:
+
+`export PATH=/escnfs/home/pbui/pub/pkgsrc/bin:$PATH`
+
+Alternatively, you can just type this manually:
+
+`PATH=/escnfs/home/pbui/pub/pkgsrc/bin:$PATH`
+
+Check your environmental variables by using `env`.  You will know this works by running the Python code in the examples directory.  If it runs, you are good to go.  
+
 ## Task 1 - Square Away Your Repo
 
 You know the drill.  If you need a quick recap, see [Assignment 7](https://github.com/adstriegel/cse20289-fa23/blob/main/assignments/assignment07/Assignment7.md).
