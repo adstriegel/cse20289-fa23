@@ -36,7 +36,7 @@ int main (void)
 
     for (request_nbr = 0; request_nbr != 10; request_nbr++) {
         printf ("Sending go %d...\n", request_nbr);
-        zmq_send (requester, "go", 3, 0);
+        zmq_send (requester, "go", 2, 0);
         memset(buffer, 0, 20);
         zmq_recv (requester, buffer, 20, 0);
         printf ("Received %s (Message %d)\n", buffer, request_nbr);
