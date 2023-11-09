@@ -1,4 +1,4 @@
-CPPFLAG=-I/opt/homebrew/include
+#CPPFLAG=-I/opt/homebrew/include
 
 all: czmq
 
