@@ -122,7 +122,7 @@ Your final submission should contain the following in the `assignment05` subdire
 
 ## Rubric  
 
-### General Mechanics - 10 points
+### General Mechanics - 11 points
 
 * 2 pts - No intervention required for the submission
 * 1 pt - Right information in `README.MD`
@@ -140,7 +140,7 @@ Your final submission should contain the following in the `assignment05` subdire
 * 6 pts - Runs correctly across various good inputs
 * 2 pts - Handles robustly various bad inputs
 
-### Task 4 - `checkBeacons.py` - 14 pts
+### Task 4 - `checkBeacons.py` - 17 pts
 
 * 1 pt - Runs correctly via the shebang
 * 2 pts - Correctly processes all JSON files in a directory
