@@ -11,7 +11,7 @@ int main (void)
 {
     int rc;             /* Save the return code */
 
-    printf ("Connecting to go irish server...\n");
+    printf ("Connecting to go irish server on port %d ... \n", ZMQ_SERVER_PORT);
     void *context = zmq_ctx_new ();
     void *requester = zmq_socket (context, ZMQ_REQ);
 
@@ -23,7 +23,7 @@ int main (void)
     if(rc == 0)
     {
         /* If this printf is printed, the network is working */
-        printf("  Successfully connected\n");
+        printf("  Successfully connected on port %d\n", ZMQ_SERVER_PORT);
     }
     else 
     {

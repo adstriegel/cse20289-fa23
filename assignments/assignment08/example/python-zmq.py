@@ -11,7 +11,14 @@ context = zmq.Context()
 socket = context.socket(zmq.REP)
 
 # Pick 40000 + last three digits of your 900 ID
-socket.bind("tcp://*:40000")
+serverPort = 40000
+
+try: 
+    print('Starting up server on port ' + str(serverPort))
+    socket.bind("tcp://*:" + str(serverPort))
+except:
+    print('Failed to bind on port ' + str(serverPort))
+    exit()
 
 while True:
     #  Wait for next request from client
