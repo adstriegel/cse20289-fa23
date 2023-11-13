@@ -162,10 +162,12 @@ For Task 4, your task is then to make this all go using the information from Tas
 
 `http://ns-mn1.cse.nd.edu/sysprogfa23/assignment08/data`
 
-* Your default directory should be `2017-12-20`. This directory contains only one JSON file (`0.json`). 
+* Your default directory should be `2019-01-21`. This directory contains only one JSON file (`0.json`).
+   * Your URL will be: `http://ns-mn1.cse.nd.edu/sysprogfa23/assignment08/data/2019-01-21/0.json`
+   * The file is also present in the `data` sub-directory to assist with testing and inspection.   
 * The server by default should load the default information on startup.
 * The server should process and respond to commands from the client.  All data should be sent in a CSV friendly format and include:
-  * `numleft,factory_id, name, battery_level, battery_updated_date, hardware` 
+  * `numleft, factory_id, name, battery_level, battery_updated_date, hardware` 
   * `numleft` contains the number of records to go after this record.  With a `beacon XXX` request, this is always zero.  
   * Note that this is the order of the fields - use the actual data
 * If the command is not understood, send `FAILURE - ` along with an appropriate error message
@@ -173,7 +175,8 @@ For Task 4, your task is then to make this all go using the information from Tas
 ### Task 4b - Client Behavior (Basic)
 
 * The client should expect to read information via input.  You can expect that `exit` will cause the client to gracefully exit / quit.
-* Your first functionality should be to support the `beacon XXX` command where this asks for the information about one specific beacon.  
+* Your first functionality should be to support the `beacon XXX` command where this asks for the information about one specific beacon. 
+   * An example valid beacon name is `TESS-STATIC-00716`.  Other valid beacon names are `TESS-STATIC-02526` and `TESS-STATIC-00623`.  
    * The returned information should be in a CSV-friendly format 
    * For the client, simply print the information as received from the server
 
@@ -202,11 +205,14 @@ At this point, the code as robustly written will get you to 85 percent of the po
 
 Examples of potential functionality includes:
 
-* Improve `lowbat` and `missing` so that `more` does not need to be continued to be typed by the user.  Do this "under the hood" in the C code, e.g. the user types `lowbat` and only the beacons with low batteries are shown.  Do the same for `missing`
+* Allow the `beacon` command to match to either the name or the factory ID 
+* Improve `lowbat` so that `more` does not need to be continued to be typed by the user.  Do this "under the hood" in the C code, e.g. the user types `lowbat` and only the beacons with low batteries are shown.  
 * Add in the ability to `refresh` the JSON information from the web server with a refresh
 * Add in the ability to change the directory to a different data directory.  There are several other directories present that you can find in the `extra-data.txt` file in the `data` sub-directory in `assignment08` in the class repository.
 * Add in the ability to query for beacon factory IDs using regular expressions.  
 * Add in the `missing` functionality from Assignment 5.  Use the data of the directory as the reference point.  This should be tracked on the server side.
+
+Justify each feature that you add in your `README.md` along with a proposed point value for the feature.
 
 ## Submission
 
