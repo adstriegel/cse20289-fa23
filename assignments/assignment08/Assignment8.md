@@ -156,6 +156,20 @@ For Task 4, your task is then to make this all go using the information from Tas
 * Put your code in a directory named `solution`.  In the `solution` directory, create two sub-directories, `server` for your Python code and `client` for your C code.
 * Use a similar port number to the one that you picked for Task 3.  Make sure that the port number is the same for both the server as well as the client, e.g. the client connects to the port on the server.  
 
+When you are finished, you should have the following directory setup:
+
+```
+# Your README.md goes here
+assignment08/
+assignment08/data/
+assignment08/example/
+assignment08/solution/
+# Your Python server
+assignment08/solution/server/
+# Your C client (.c, Makefile, etc.)
+assignment08/solution/client/
+```
+
 ### Task 4a - Server Behavior (Basic)
 
 * All data for the server can be found underneath:
@@ -198,6 +212,17 @@ more
 FAILURE - No more records
 exit
 ```
+
+Your client should support the following commands that will operate in tandem with the support on the server side:
+
+* `exit`: Gracefully exit.  You may presume that any inputs directed in (e.g. via `<`) will have `exit` as their last line.
+* `beacon XXXX`: Request information for one specific beacon (XXX) using the name of the beacon.  You may presume that the beacon name is a continuous string (e.g. no spaces).  
+* `lowbat`: Request information on all beacons that have a low battery.  This will generate a counting down list accessible via `more`.  You may presume that a second `lowbat` query (or any other query feature you write - see Task 5) should not occur.
+   * Note that means that this would be a command failure, not that it cannot occur.
+* `more`: Get the next entry in the list courtesy of a `lowbat` query.
+* Any other unsupported command should generate a failure.
+
+It is up to you as to how you deal with commands and state.  Generally, it will be a bit easier to have the Python server deal with such issues and have the C client basically relay what was typed in.  
 
 ### Task 5 - Choose Your Features
 
