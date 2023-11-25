@@ -2,15 +2,17 @@
 
 **Assigned:** Sunday, November 26th
 
-**Due Date**: Saturday, December 3rd, 10 PM
+**Due Date**: Wednesday, December 6th, 10 PM
 
-**Early Submission:** Friday, December 2nd, 10 PM
+**Early Submission:** Saturday, December 2nd, 10 PM
 
 **Branch Name**: `NETID/assignment09`
 
 On this final assignment, we will look at how we can launch sub-processes via both Python as well as C.  Rather than using ZMQ to send messages, your Python code will directly a system command as well as invoke your C code.  The Python code will be responsible for extracting the archive and then invoking your C code for each potential network capture file.  The C code will be doing the binary analysis on the file to determine if one of two specific binary sequences are present at the start of the potential network file.        
 
 In keeping with the last assignment, the files that we want to check though are stored on a remote web server.  We will use Python code to determine what files are present on the web server, download the archives present in the list, and then to launch our C code to process each of the respective potential network capture files.   
+
+*Note that it is highly recommended that you complete the assignment before the last week - hence the early submission deadline is extended to Saturday, December 2nd*
 
 ## Task 1 - Square Away Your Repo
 
@@ -102,6 +104,7 @@ Write a Python script named `scanfiles.py` that does the following:
 
 * Take in a directory as an input argument
 * List all files present in that directory
+* Invoke the system command `stat` on each file
 
 That's it.  
 
@@ -140,6 +143,8 @@ Your Python script named `scansite.py` should do the following:
    * Invoke your C code on each of the files
    * Clean up the downloaded / extracted archive once analysis is complete
 
+For the purposes of this assignment, you should do each file sequentially.
+
 Your C code should be the code as written in Task 3d and can simply be copied over.  Your C code (Makefile, source files) should be in the same directory.     
      
 There are a set of five total examples provided on the website enumerated from `set00` through `set04`.  `set00` contains only a single archive, `set01` contains no archives, `set02` contains two archives, `set03` contains a mix of files, and `set04` contains a mix of files along with invalid packet captures.  There is also a `test` sub-directory present as well.
@@ -161,7 +166,7 @@ The submission will be the same procedure as past assignments.  That means:
 
 ## Extra Credit
 
-You may add one pieces of functionality for extra credit to your submission.  The extra credit is due at the normal due date.  Note that extra credit will not be graded on late submissions.
+You may add two pieces of functionality for extra credit to your submission.  The extra credit is due at the normal due date.  Note that extra credit will not be graded on late submissions.
 
 ### Extra Credit - Use fork / exec - 15 points
 
@@ -173,5 +178,11 @@ Rather than having your Python code do the work of uncompressing, extraction, an
 
 Note that this code should not break your original submission. Denote in your `README.md` that you have completed this extra credit.  
 
+### Extra Credit - Parallelize It - 10 points
+
+Make your code parallelization friendly such that you can use `concurrent.futures` with up to four processes to accomplish the respective tasks.  Note that you may want to make specific sub-directories such that each archive processing is separated.  Also note that controlling output does get a bit more challenging to avoid different efforts clobbering each other.  
+
+You may receive up to five points of extra credit for parallelization and five points of extra credit if you can keep the output reasonably clean while doing four processes. It is up to you as to how best to handle the respective parallelization.    
+ 
 ## Rubric
 
