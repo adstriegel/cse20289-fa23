@@ -116,10 +116,11 @@ The code runs without segfaults but you will need to modify it for several aspec
 
 * Have the code expect only a single input - the name of the file including the path to analyze
 * Check to see if the file starts with the magic number - if it does not - appropriately display an error
+   * You can read about the [pcap file format](https://wiki.wireshark.org/Development/LibpcapFileFormat).  The tests are actually in the code already but you need to modify for it to properly show the error message.
    * `Error: XXXX.txt is not a network capture file.`
    * Note that your error message should only show the file, not the entire path of the file itself.   
 * Display the number of packets present in the file
-   * Note that the populated `struct FilePcapInfo` likely has what you want 
+   * Note that the populated `struct FilePcapInfo` likely has what you want, you just need to display it 
 
 ### Task 3e - Status Check
 
@@ -145,7 +146,7 @@ Your Python script named `scansite.py` should do the following:
 
 For the purposes of this assignment, you should do each file sequentially.
 
-Your C code should be the code as written in Task 3d and can simply be copied over.  Your C code (Makefile, source files) should be in the same directory.     
+Your C code should be the code as written in Task 3d and can simply be copied over.  Your C code (Makefile, source files) should be in the same directory as your broad Python script.     
      
 There are a set of five total examples provided on the website enumerated from `set00` through `set04`.  `set00` contains only a single archive, `set01` contains no archives, `set02` contains two archives, `set03` contains a mix of files, and `set04` contains a mix of files along with invalid packet captures.  There is also a `test` sub-directory present as well.
 
@@ -186,3 +187,4 @@ You may receive up to five points of extra credit for parallelization and five p
  
 ## Rubric
 
+To be added by Thursday PM
