@@ -185,6 +185,36 @@ Make your code parallelization friendly such that you can use `concurrent.future
 
 You may receive up to five points of extra credit for parallelization and five points of extra credit if you can keep the output reasonably clean while doing four processes. It is up to you as to how best to handle the respective parallelization.    
  
-## Rubric
+## Rubric - 60 points
 
-To be added by Thursday PM
+### General Mechanics - 10 points
+
+* 1 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Evidence of branching
+   * Or an appropriate explanation in your README.md or on Canvas 
+* 1 pt - More thane one commit visible on GitHub with appropriate commit messages
+* 1 pt - Inclusion of only the relevant source code / correct usage as needed of `.gitignore` or selective inclusion of files
+* 4 pts - Good clean / well-commented code
+
+## Task 3 - 16 points
+
+* 4 pts - Task 3a runs correctly with simple test cases
+* 4 pts - Task 3b runs correctly with simple test cases
+* 4 pts - Task 3c runs correctly with simple test cases
+* 4 pts - Task 3d runs correctly with simple test cases
+
+## Task 4 - 34 points
+
+* 20 pts - Proper results on set00 through set04
+   * For each set
+      * 2 pts - Proper processing of all files
+      * 2 pts - Proper identification for all files
+* 4 pts - Proper cleanup
+   * Proper removal of downloaded / extracted content
+* 1 pt - Runs in a reasonable amount of time
+* 5 pts - Proper error handling / robustness
+* 4 pts - Properly handles alternative test cases
+
+     
