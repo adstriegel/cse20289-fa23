@@ -253,7 +253,51 @@ The submission will be the same procedure as past assignments.  That means:
 * In your `README.md`, feel free to add any additional commentary about what works or does not work with your code. 
 * Your `README.md` should thoroughly document what if anything that you have done for Task 5.  
 
+## Rubric
 
+### General Mechanics - 12 points
+
+* 2 pts - No intervention required for the submission
+* 1 pt - Right information in `README.MD`
+* 1 pt - Right information in Canvas (commit hash)
+* 1 pt - Evidence of branching
+   * Or an appropriate explanation in your README.md or on Canvas 
+* 1 pt - More thane one commit visible on GitHub with appropriate commit messages
+* 4 pts - Well-commented code
+* 2 pts - Appropriate explanation in `README.md` with respect to additional functionality
+
+### Task 3 Functionality - 24 pts
+
+* 6 pts - Task 3a - Basic functionality works
+   * 3 pts each - Python server, C client 
+* 3 pts - Task 3b - Web request 
+* 15 pts - Task 3c - Request / reply 
+   * 3 pts - Proper functionality
+   * 3 pts - Proper error message 
+   * 3 pts - exit
+   * 6 pts - Runs when input is directed in
+
+### Task 4 Functionality - 49 points
+
+* 3 pts - Well-structured Python code
+* 3 pts - Well-structured C code
+* 10 pts - Correctly queries for all test cases for valid beacons and returns correct result
+   * 5 pts - Correct data fields are present
+   * 5 pts - Correct responses  
+* 5 pts - Correctly handles invalid beacon requests
+* 15 pts - Correctly handles lowbat
+   * 3 pts - Proper count remaining
+   * 8 pts - Iterates to the end of the count via more
+   * 4 pts - Properly notes end of list in lowbat
+* 3 pts - Exits properly
+* 5 pts - Properly handles bad commands
+* 5 pts - Operates correctly when taking input via directed input (e.g. `<`)  
+
+### Additional Functionality - 15 points
+
+* Up to 15 points as presented / discussed in the `README.md` file
+   * Note that all features must be discussed in the `README.md` for credit
+  
 
 
 

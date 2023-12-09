@@ -10,6 +10,13 @@ if [[ $# -ne 1 ]]; then
     exit 1
 fi
 
+# Any second argument disables shell script testing
+if [[ $# -ne 2 ]]; then 
+    TestShell=1
+else
+    TestShell=0
+fi
+
 # Extract the NetID from the argument
 NetID=$1
 
